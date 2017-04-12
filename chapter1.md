@@ -4,6 +4,10 @@ description : Insert the chapter description here
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+
+--- type:VideoExercise lang:r xp:50 skills:1 key:9af3ec7ae0
+## <<<New Exercise>>>
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:53110e9924
 ## A really bad movie
 
