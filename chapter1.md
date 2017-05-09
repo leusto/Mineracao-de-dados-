@@ -10,12 +10,12 @@
 *** =pre_exercise_code
 ```{r}
 data("iris")
-summary("iris")
+
 ```
 
 *** =sample_code
 ```{r}
-
+summary("iris")
 ```
 
 *** =solution
