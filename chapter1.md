@@ -19,7 +19,7 @@ data("iris")
 
 *** =sample_code
 ```{r}
-print(iris)
+#print(iris)
 ```
 
 *** =solution
