@@ -9,7 +9,7 @@
 
 *** =pre_exercise_code
 ```{r}
-iris("data")
+data("iris")
 ```
 
 *** =sample_code
