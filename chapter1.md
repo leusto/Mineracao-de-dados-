@@ -1,7 +1,5 @@
----
-title       :chapter1
-description : Insert the chapter description here
---- type:NormalExercise lang:r xp:100 skills:1 key:c8f35b0ada
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## <<<New Exercise>>>
 
 
@@ -11,7 +9,7 @@ description : Insert the chapter description here
 
 *** =pre_exercise_code
 ```{r}
-data("iris)
+iris("data")
 ```
 
 *** =sample_code
@@ -28,3 +26,4 @@ data("iris)
 ```{r}
 
 ```
+---
