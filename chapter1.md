@@ -29,10 +29,6 @@ summary(iris)
 
 *** =sct
 ```{r}
-test_error()
-test_object(summary(iris),
-            undefined_msg = "Make sure to define `x`!",
-            incorrect_msg = "Have you correctly assigned 5 to `x`!")
-success_msg("Good job! Head over to the next exercise")
+
 ```
 ---
