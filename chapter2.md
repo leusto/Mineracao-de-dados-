@@ -1,10 +1,10 @@
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
-## Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+## 22222 Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
 
 
 *** =instructions
-O dataset que será usado neste exercício chama-se iris, o qual consiste de um tipo de planta com 3 categorias de espécies.
+22222  dataset que será usado neste exercício chama-se iris, o qual consiste de um tipo de planta com 3 categorias de espécies.
 
 Esta é uma base de dados que já existe no datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris
 
@@ -41,9 +41,9 @@ success_msg("Good job! Head over to the next exercise")
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:e74c30a746
-## Multiple Choice Exercise Title
+## 2222 Multiple Choice Exercise Title
 
-This is the assignment.
+2222 This is the assignment.
 How much is `2 + 2`?
 
 *** =instructions
