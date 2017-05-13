@@ -26,24 +26,25 @@ data("iris")
 
 Com o dataset carregado procura-se então enriquecer as informações com a verificação da dimensão do dataset e conhecimentos sobre os atributos como nome, estrutura e tipos.
 
-
+O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função dim() cujo argumento é a base de dados. 
 
 ```{r}
-#print(iris)
+# verificar a dimensão do dataset iris
+# atribua o resusltado da dimensão na varipável d
 ```
 
 *** =solution
 ```{r}
-x<-iris["Sepal.Length"]
+d <- dim(iris)
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            undefined_msg = "Make sure to define `x`!",
-            incorrect_msg = "Have you correctly assigned 5 to `x`!")
-success_msg("Good job! Head over to the next exercise")
+test_object("d",
+            undefined_msg = "Tenha certeza de que a variável  `d` foi definida! ",
+            incorrect_msg = "Você atribuiu o resultado da função dim() a variável `d`!")
+success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
 ---
