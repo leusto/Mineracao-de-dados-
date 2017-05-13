@@ -250,7 +250,11 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar o nome dos atributos dataset iris
-# atribua o resusltado dos nomes na variável s
+# atribua o resusltado dos nomes na variável su
+
+
+
+#print()
 
 
 ```
