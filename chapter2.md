@@ -1,3 +1,7 @@
+---
+title       : Manipulação sobre o dataset
+description : Este capitulo consiste em ....
+
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## 22222 Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
