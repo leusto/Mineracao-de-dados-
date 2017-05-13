@@ -198,3 +198,31 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 
 ```
 ---
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:43ef61a87b
+## Em relação aos atributos do dataset iris:
+
+Qual oos tipos dos atributos?
+
+*** =instructions
+- 3 numéricos (num) e 1 categórico (factor)
+- 1 numérico (num) e 3 categóricos (factor)
+- 4 numéricos (num) e 1 categórico (factor)
+- apenas atributos numéricos
+
+*** =hint
+Para visualizar o resultado de uma variável, use a função *print()*
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sct
+```{r}
+msg1 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg3 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
+msg4 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
+```
