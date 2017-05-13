@@ -127,3 +127,31 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 ---
 
 
+--- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:5623f9558f
+## Em relação aos atributos do dataset iris:
+
+Qual o nome dos atributos?
+
+*** =instructions
+- 1, 2, 3, 4 e 5
+- "Sepal Length","Sepal Width","Petal Length","Petal Width" e "Species"
+- "SL","SW","PL","PW" e "Species"
+- "Sepal.Length","Sepal.Width","Petal.Length","Petal.Width" e "Species"
+
+*** =hint
+Para visualizar o resultado de uma variável, use a função *print()*
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sct
+```{r}
+msg1 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/names."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg3 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg4 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
+```
+
