@@ -60,7 +60,6 @@ Qual o número de exemplares e o número de atributos presentes no dataset?
 - 150 exemplares e 5 atributos
 - 150 exemplares e 1 atributo
 - 5 exemplares e 150 atributos
--
 
 *** =hint
 Para visualizar o resultado de uma variável, use a função *print()*
