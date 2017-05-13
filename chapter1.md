@@ -228,7 +228,7 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:a773fcb8e3
-## Conhecendo os atributos do dataset b(iris)
+## Conhecendo os atributos do dataset iris
 
 Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
 
@@ -274,3 +274,32 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 
 ```
 ---
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:536782eac4
+## Em relação aos resultados da função summary:
+
+Qual o resulatdo a função apresenta?
+
+*** =instructions
+- apresentação resumida dos exemplares do dataset
+- um resumo estatístico do dataset
+- alguns exemplos de valores dos atributos
+- a função não tem retorno de valor
+
+*** =hint
+Para visualizar o resultado de uma variável, use a função *print()*
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sct
+```{r}
+msg1 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/summary."
+msg2 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
+msg3 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/summary."
+msg4 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/summary."
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
+```
