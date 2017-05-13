@@ -15,7 +15,7 @@ Para a manipulação dos dados deste dataset deve-se chamar pelo nome *iris*.
 
 Com o dataset carregado procura-se então enriquecer as informações com a verificação da dimensão do dataset e conhecimentos sobre os atributos como nome, estrutura e tipos.
 
-O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função dim() cujo argumento é a base de dados. 
+O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo argumento é a base de dados. 
 
 
 *** =hint
@@ -42,8 +42,8 @@ d <- dim(iris)
 ```{r}
 test_error()
 test_object("d",
-            undefined_msg = "Tenha certeza de que a variável  `d` foi definida! ",
-            incorrect_msg = "Você atribuiu o resultado da função dim() a variável `d`!")
+            undefined_msg = "Tem certeza de que a variável  `d` foi definida! ",
+            incorrect_msg = "Tem certeza que atribuiu o resultado da função `dim()` a variável `d`!")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
