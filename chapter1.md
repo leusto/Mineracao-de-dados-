@@ -9,7 +9,9 @@ Este exercício consiste em carregar um dataset e fazer algumas explorações in
 *** =instructions
 O dataset que será usado neste exercício chama-se iris, o qual consiste de um tipo de planta com 3 categorias de espécies.
 
-Esta é uma base de dados que já existe no datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris
+Esta é uma base de dados que já existe no repositório do datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris.
+
+Para a manipulação dos dados deste dataset deve-se chmar pelo nome *iris*
 
 *** =hint
 data("iris")
