@@ -152,6 +152,6 @@ msg1 = "Consulte a documentação e tente novamente: https://www.rdocumentation.
 msg2 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
 msg3 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
 msg4 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
-test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
+test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
