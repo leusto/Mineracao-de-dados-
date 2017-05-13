@@ -180,7 +180,7 @@ data("iris")
 # verificar o nome dos atributos dataset iris
 # atribua o resusltado dos nomes na variável s
 
-# para visualziar o valor da variável, use a função print()
+
 ```
 
 *** =solution
