@@ -1,6 +1,8 @@
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
-## Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+## Análise Exploratória de Dados
+
+Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
 
 
 *** =instructions
