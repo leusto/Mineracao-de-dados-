@@ -56,10 +56,10 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 Qual o número de exemplares e o número de atributos presentes no dataset?
 
 *** =instructions
-- 5 e 150
-- 150 e 5
-- 1 e 2
-- 150
+- 5 exemplares e 150 atributos
+- 150 exemplares e 5 atributos
+- 150 exemplares e 1 atributo
+- 5 exemplares e 150 atributos
 -
 
 *** =hint
@@ -72,8 +72,9 @@ Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Caso precise, use o print() na variável para obter estas informações."
-msg2 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
-msg3 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
-test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3))
+msg1 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg2 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
+msg3 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
+msg4 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
