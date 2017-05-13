@@ -106,6 +106,8 @@ data("iris")
 ```{r}
 # verificar o nome dos atributos dataset iris
 # atribua o resusltado dos nomes na varipável n
+
+# para visualziar o valor da variável, use a função print()
 ```
 
 *** =solution
