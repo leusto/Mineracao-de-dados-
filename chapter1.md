@@ -178,22 +178,22 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar o nome dos atributos dataset iris
-# atribua o resusltado dos nomes na varipável n
+# atribua o resusltado dos nomes na variável s
 
 # para visualziar o valor da variável, use a função print()
 ```
 
 *** =solution
 ```{r}
-n <- names(iris)
+s <- str(iris)
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("n",
-            undefined_msg = "Tem certeza de que a variável  `n` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu a variável `n` o resultado da função `names()` !")
+test_object("s",
+            undefined_msg = "Tem certeza de que a variável  `s` foi definida! ",
+            incorrect_msg = "Tem certeza que atribuiu a variável `s` o resultado da função `str()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
