@@ -1,3 +1,7 @@
+---
+title       : Criação de metadados sobre o dataset
+description : Este capitulo consiste em ....
+
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Análise Exploratória de Dados
