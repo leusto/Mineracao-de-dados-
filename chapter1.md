@@ -11,7 +11,7 @@ O dataset que será usado neste exercício chama-se iris, o qual consiste de um 
 
 Esta é uma base de dados que já existe no repositório do datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris.
 
-Para a manipulação dos dados deste dataset deve-se chmar pelo nome *iris*
+Para a manipulação dos dados deste dataset deve-se chamar pelo nome *iris*
 
 *** =hint
 data("iris")
@@ -23,6 +23,11 @@ data("iris")
 ```
 
 *** =sample_code
+
+Com o dataset carregado procura-se então enriquecer as informações com a verificação da dimensão do dataset e conhecimentos sobre os atributos como nome, estrutura e tipos.
+
+
+
 ```{r}
 #print(iris)
 ```
