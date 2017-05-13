@@ -155,3 +155,46 @@ msg4 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:5cb0c44603
+## Conhecendo os atributos do dataset ***iris***
+
+Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+
+
+*** =instructions
+
+O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *str()* cujo argumento é a base de dados. 
+
+
+*** =hint
+data("iris")
+
+*** =pre_exercise_code
+```{r}
+data("iris")
+
+```
+
+*** =sample_code
+```{r}
+# verificar o nome dos atributos dataset iris
+# atribua o resusltado dos nomes na varipável n
+
+# para visualziar o valor da variável, use a função print()
+```
+
+*** =solution
+```{r}
+n <- names(iris)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("n",
+            undefined_msg = "Tem certeza de que a variável  `n` foi definida! ",
+            incorrect_msg = "Tem certeza que atribuiu a variável `n` o resultado da função `names()` !")
+success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
+
+```
+---
