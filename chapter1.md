@@ -50,20 +50,20 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 ---
 
 
-
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:e74c30a746
-## Multiple Choice Exercise Title
+## Em relação a dimensão do dataset iris:
 
-This is the assignment.
-How much is `2 + 2`?
+Qual o número de exemplares e o número de atributos presentes no dataset?
 
 *** =instructions
-- 2
-- 3
-- 4
+- 5 e 150
+- 150 e 5
+- 1 e 2
+- 150
+-
 
 *** =hint
-Here's a hint: think about your time in primary school.
+Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =pre_exercise_code
 ```{r}
@@ -72,8 +72,8 @@ Here's a hint: think about your time in primary school.
 
 *** =sct
 ```{r}
-msg1 = "Try again! Think about your time in school."
-msg2 = "Summing two even numbers always leads to another even number. Try again."
-msg3 = "Well done. Proceed to the next exercise"
-test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
+msg1 = "Tente novamente! Caso precise, use o print() na variável para obter estas informações."
+msg2 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
+msg3 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3))
 ```
