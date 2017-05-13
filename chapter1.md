@@ -43,7 +43,7 @@ d <- dim(iris)
 test_error()
 test_object("d",
             undefined_msg = "Tem certeza de que a variável  `d` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu o resultado da função `dim()` a variável `d`!")
+            incorrect_msg = "Tem certeza que atribuiu a variável `d` o resultado da função `dim()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
