@@ -25,7 +25,7 @@ Neste desafio pede-se que selecione o atributo <b>Sepal.Length</b>
 <ul>
 Lembrando que:
  <li>Para saber o nome dos atributos do dataset usa-se a função <span stype="text-ident:itali,backgroung:#e6f5ff">names()</span></li>
- <li> </li>
+ <li>A seleção de um atributo pode ser feita da seguinte maneira: <span stype="text-ident:itali,backgroung:#e6f5ff">dataset<b>$atributo<b></span></li>
  <li> </li>
 </ul>
 
