@@ -171,9 +171,9 @@ sl_acima_media<-iris$Sepal.Length[indices]
 *** =sct
 ```{r}
 test_error()
-test_object("m_sl",
-            undefined_msg = "Tem certeza que definiu a variável `m_sl`!",
-            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length) a variável `m_sl`?")
+test_object("sl_acima_media",
+            undefined_msg = "Tem certeza que definiu a variável `sl_acima_media`!",
+            incorrect_msg = "Você seguiu todos os passos do algoritmo apresentados em `instructions`?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
