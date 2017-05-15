@@ -26,7 +26,6 @@ Neste desafio pede-se que selecione do dataset <b>iris</b> o atributo <b>Sepal.L
 Lembrando que:
  <li>Para saber o nome dos atributos do dataset usa-se a função <span style="font-style:italic;background:#e6f5ff">names()</span></li>
  <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset<b>$</b>atributo</span></li>
- <li> </li>
 </ul>
 
 *** =hint
@@ -40,7 +39,7 @@ data("iris")
 *** =sample_code
 ```{r}
 # Selecione do dataset iris o atributo Sepal.Length 
-# Salve na variável sl 
+# Salve a seleção na variável sl 
 ```
 
 *** =solution
@@ -53,7 +52,7 @@ sl<-iris$Sepal.Length
 test_error()
 test_object("sl",
             undefined_msg = "Tem certeza que definiu a variável `sl`!",
-            incorrect_msg = "Você atribuiu iris$Sepal.Length a variável `sl`!")
+            incorrect_msg = "Você atribuiu iris$Sepal.Length a variável `sl`?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
@@ -65,7 +64,45 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:d8bbb2a3db
+## Calculando a média de uma variável
+Calcule o valor médio da variável <b>Sepal.Length</b>. E salve o resultado na variável m_sl
 
+*** =instructions
+<ul>
+Lembrando que:
+ <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset<b>$</b>atributo</span></li>
+ <li>O cálculo da média pode ser feito com o uso da função <span style="font-style:italic;background:#e6f5ff">mean()</span></li>
+</ul>
+
+*** =hint
+data("iris")
+
+*** =pre_exercise_code
+```{r}
+data("iris")
+```
+
+*** =sample_code
+```{r}
+# Calcule a média do atributo Sepal.Length 
+# Salve o resultado na variável m_sl 
+```
+
+*** =solution
+```{r}
+msl<-mean(iris$Sepal.Length)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("msl",
+            undefined_msg = "Tem certeza que definiu a variável `msl`!",
+            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length a variável) a variável `msl`?")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Selecionando uma única variável do dataset
 
