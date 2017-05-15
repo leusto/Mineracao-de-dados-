@@ -126,24 +126,44 @@ O algoritmo para ter a informação dos maiores valores pode ser descrito como:
 </ul>
 
 *** =hint
+data("iris")
 
 *** =pre_exercise_code
 ```{r}
-
+data("iris")
 ```
 
 *** =sample_code
 ```{r}
+# Selecione do dataset iris o atributo Sepal.Length 
+# Salve o resultado na variável sl
+
+
+# Calcule e média do atributo Sepal.Length
+# Salve o resultado na variável sl_m
+
+
+
+# Compare a sequencia com o valor médio para ter os maiores valores
+# Salve o resultado na variável maiores
+
+
+# 
 
 ```
 
 *** =solution
 ```{r}
-
+m_sl<-mean(iris$Sepal.Length)
 ```
 
 *** =sct
 ```{r}
+test_error()
+test_object("m_sl",
+            undefined_msg = "Tem certeza que definiu a variável `m_sl`!",
+            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length) a variável `m_sl`?")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
