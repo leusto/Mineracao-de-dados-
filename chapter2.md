@@ -103,6 +103,10 @@ test_object("m_sl",
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
+
+
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Selecionando uma única variável do dataset
 
