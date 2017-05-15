@@ -2,6 +2,15 @@
 title       : Manipulação sobre o dataset
 description : Este capitulo consiste em ....
 
+- selecionar uma variavel
+- calcular a media, desvio de uma variavel
+
+- boxplot
+- outlier
+
+- grafico de dispersao
+
+- gráfico de histograma
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## 22222 Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
