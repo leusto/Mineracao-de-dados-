@@ -19,7 +19,7 @@ description : Este capitulo consiste em ....
 
 A seleção de um único atributo do dataset pode ser feito agrupando o nome do dataset ao nome do atributo de interesse. O operador de agrupamento no R  é o <b>$</b>.
 
-Neste desafio pede-se que selecione o atributo <b>Sepal.Length</b>
+Neste desafio pede-se que selecione do dataset <b>iris</b> o atributo <b>Sepal.Length</b>
 
 *** =instructions
 <ul>
@@ -34,12 +34,12 @@ data("iris")
 
 *** =pre_exercise_code
 ```{r}
-
+data("iris")
 ```
 
 *** =sample_code
 ```{r}
-
+# Selecione do datset iris o atributo Sepal.Length 
 ```
 
 *** =solution
