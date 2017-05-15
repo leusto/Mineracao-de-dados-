@@ -121,7 +121,7 @@ O algoritmo para ter a informação dos maiores valores pode ser descrito como:
  <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo) e armazenar o resulatdo na variável <b>sl</b></span></li>
  <li>Calcular a média do atributo <span style="font-style:italic;background:#e6f5ff">mean()</span>  e armazenar o resulatdo na variável <b>m_sl</b></li>
  <li>Comparar a sequência de valores com o valor médio. Aqui será preciso fazer uso do operador lógico <b>></b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">sl <b>></b> m_sl</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (maior que a média) e FALSE para o caso contrário.</li>
- <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length</li>. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógic
+ <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição que aparece a condição TRUE. </li>
  <li></li>
 </ul>
 
