@@ -145,16 +145,27 @@ data("iris")
 
 
 # Compare a sequencia com o valor médio para ter os maiores valores
-# Salve o resultado na variável maiores
+# Salve o resultado na variável 'maiores'
 
 
-# 
+# Recupere a posição (indices) dos valores de Sepal.Length que são maiores que a média
+# Salve na variável 'indices'
+
+
+# Imprima os valores dos indices com a função print()
+
+
+# Recupere os valores de Sepal.Length que estão acima da média
+# Salve na variável 'sl_acima_media'
+
+
+# Imprima os valores de sl_acima_media com a função print()
 
 ```
 
 *** =solution
 ```{r}
-m_sl<-mean(iris$Sepal.Length)
+sl_acima_media<-iris$Sepal.Length[indices]
 ```
 
 *** =sct
