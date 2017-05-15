@@ -98,8 +98,8 @@ m_sl<-mean(iris$Sepal.Length)
 ```{r}
 test_error()
 test_object("m_sl",
-            undefined_msg = "Tem certeza que definiu a variável `msl`!",
-            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length a variável) a variável `msl`?")
+            undefined_msg = "Tem certeza que definiu a variável `m_sl`!",
+            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length) a variável `m_sl`?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
