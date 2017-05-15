@@ -49,6 +49,11 @@ sl<-iris$Sepal.Length
 
 *** =sct
 ```{r}
+test_error()
+test_object("sl",
+            undefined_msg = "Tem certeza que definiu a variável `sl`!",
+            incorrect_msg = "Você atribuiu iris$Sepal.Length a variável `sl`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
 ---
