@@ -1,6 +1,17 @@
 ---
 title       : Manipulação sobre o dataset
-description : Este capitulo consiste em ....- selecionar uma variavel- calcular a media, desvio de uma variavel- boxplot- outlier- grafico de - dispersao - gráfico de histograma
+description : Este capitulo consiste em ....
+- selecionar uma variavel
+- calcular a media, desvio de uma variavel
+
+- boxplot
+- outlier
+
+- grafico de dispersao
+
+- gráfico de histograma
+
+
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:66f49495b2
 ## Selecionando um único atributo do dataset
