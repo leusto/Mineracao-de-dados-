@@ -108,6 +108,34 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:e5752f2629
+## Selecionando os valores do dataset acima da média
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Selecionando uma única variável do dataset
 
