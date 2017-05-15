@@ -1,4 +1,3 @@
----
 title       : Manipulação sobre o dataset
 description : Este capitulo consiste em ....
 
@@ -12,8 +11,59 @@ description : Este capitulo consiste em ....
 
 - gráfico de histograma
 
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:66f49495b2
+## Selecionando um único atributo do dataset
+
+A seleção de um único atributo do dataset pode ser feito agrupando o nome do dataset ao nome do atributo de interesse. O operador de agrupamento no R  é o <b>$</b>.
+
+Neste desafio pede-se que selecione o atributo <b>Sepal.Length</b>
+
+*** =instructions
+<ul>
+Lembrando que:
+ <li>Para saber o nome dos atributos do dataset usa-se a função <span stype="text-ident:itali,backgroung:#e6f5ff">names()</span></li>
+ <li> </li>
+ <li> </li>
+</ul>
+
+*** =hint
+data("iris")
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+---
+
+
+
+
+
+
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
-## 22222 Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+## Selecionando uma única variável do dataset
+
+Para a seleção
 
 
 *** =instructions
