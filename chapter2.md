@@ -71,8 +71,8 @@ Calcule o valor médio da variável <b>Sepal.Length</b>. E salve o resultado na 
 *** =instructions
 <ul>
 Lembrando que:
- <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset<b>$</b>atributo</span></li>
- <li>O cálculo da média pode ser feito com o uso da função <span style="font-style:italic;background:#e6f5ff">mean()</span></li>
+ <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset$atributo</span></li>
+ <li>O cálculo da média pode ser feito com o uso da função <span style="font-style:italic;background:#e6f5ff">mean()</span>. Ela recebe como argumento a sequência de valores que se deseja calcular a média, por exemplo: <span style="font-style:italic;background:#e6f5ff">mean(dataset$atributo)</span></li>
 </ul>
 
 *** =hint
@@ -91,13 +91,13 @@ data("iris")
 
 *** =solution
 ```{r}
-msl<-mean(iris$Sepal.Length)
+m_sl<-mean(iris$Sepal.Length)
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("msl",
+test_object("m_sl",
             undefined_msg = "Tem certeza que definiu a variável `msl`!",
             incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length a variável) a variável `msl`?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
