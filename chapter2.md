@@ -39,7 +39,8 @@ data("iris")
 
 *** =sample_code
 ```{r}
-# Selecione do dataset iris o atributo Sepal.Length e salve na variável sl 
+# Selecione do dataset iris o atributo Sepal.Length 
+# Salve na variável sl 
 ```
 
 *** =solution
