@@ -227,7 +227,7 @@ ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + geom_boxplot(aes(fill=Specie
 
 *** =solution
 ```{r}
-resposta <- "setosa"
+resposta <- "virginica"
 ```
 
 *** =sct
