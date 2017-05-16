@@ -142,12 +142,19 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:07dccfea63
-## Entendendo os resultados de média com uso de explorações gráficas
+## Entendendo os resultados de média e desvio com uso de explorações gráficas
 
+Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na construção de um histograma. Esse é um tipo de gráfico que mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. Pede-se que faça a construção do boxplot para a Species versicolor.
 
 
 
 *** =instructions
+Exemplo da construção do histograma para a Specie setosa:
+
+histogram <- ggplot(data=iris, aes(x=Sepal.Length))
+histogram + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
+  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
+
 
 *** =hint
 library(ggplot2)
@@ -161,19 +168,27 @@ data("iris")
 
 *** =sample_code
 ```{r}
-
+# Exemplo do histogram para a classe setosa
 histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
 histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
   xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
+
+# Faça o historgama para a classe 'versicolor' e salve o resulatdo em histogram_versicolor
 
 ```
 
 *** =solution
 ```{r}
+histogram_versicolor <- ggplot(data=iris, aes(x=Sepal.Length))
+histogram_versicolor + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="versicolor"))) + 
+  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
 
 ```
 
 *** =sct
 ```{r}
-
+test_object("histogram_versicolor",
+            undefined_msg = "Tem certeza que salvou a plotagem na variável `histogram_versicolor`!",
+            incorrect_msg = "Você tem certeza que fez o histograma para atributo `Species="versicolor"`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
