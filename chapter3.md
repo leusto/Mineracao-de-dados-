@@ -197,9 +197,15 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 --- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
 ## Analisando valores fora do padrão (oulier)
 
-Um valor fora do padrão, também chamado de outlier, consiste em uma medida que extrapola os limites estabelecitos pelos quartis dos valores dos dados. A identificação desse valor pode ser feita com o uso do boxplot
+Um valor fora do padrão, também chamado de outlier, consiste em uma medida que extrapola os limites estabelecitos pelos quartis dos valores dos dados. A identificação desse valor pode ser feita com o uso do boxplot, gráfico que aparece ao lado. 
+
+Para um entendimento detalhado do significado deste gráfico, recomenda-se a leitura do capítulo 2 da seguinte literatura:<a href="https://www.amazon.com.br/Introdu%C3%A7%C3%A3o-Minera%C3%A7%C3%A3o-Dados-Leandro-Augusto/dp/853528446X/ref=cm_cr_arp_d_product_top?ie=UTF8">Introdução a Mineração de Dados</a>.
+
+Para esta atividade, o que interessa é identificar nos gráficos de boxplot se para o atributo descritivo Sepal.Length, separado por atributos classificatórios, há algum ponto fora das barras paralelas que indicam os limites toleráveis de valores dentro de um padrão esperado.
+
 
 *** =instructions
+Para a solução desta atividade, atribua a uma variável chamada resposta, o nome do atributo classificatório com problema de outlier.
 
 *** =hint
 
@@ -212,19 +218,23 @@ ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + geom_boxplot(aes(fill=Specie
 
 *** =sample_code
 ```{r}
+# Geração do Box Plot para o atributo descritivo  Sepal.Length
+ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + geom_boxplot(aes(fill=Species)) + ylab("Sepal Length") + ggtitle("Iris Boxplot") + stat_summary(fun.y=mean, geom="point", shape=5, size=4)
+
+# atribua a variável resposta o nome do atributo classificatório com outlier
 
 ```
 
 *** =solution
 ```{r}
-x <- "setosa"
+resposta <- "setosa"
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            undefined_msg = "Make sure to define `x`!",
-            incorrect_msg = "Have you correctly assigned 5 to `x`!")
-success_msg("Good job! Head over to the next exercise")
+test_object("resposta",
+            undefined_msg = "Tenha certeza da declaração da variável  `resposta`!",
+            incorrect_msg = "O atributo classificatório definido está icorreto. Verifique qual gráfico de boxplote tem a presença de um ponto fora das linhas verticais. ")
+success_msg("Good job! SIga em frente com o próximo desafio para identificar o atributo com outlier")
 ```
