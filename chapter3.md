@@ -193,7 +193,6 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 
 
 
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
 ## Analisando valores fora do padrão (oulier)
 
@@ -237,4 +236,69 @@ test_object("resposta",
             undefined_msg = "Tenha certeza da declaração da variável  `resposta`!",
             incorrect_msg = "O atributo classificatório definido está icorreto. Verifique qual gráfico de boxplote tem a presença de um ponto fora das linhas verticais. ")
 success_msg("Good job! SIga em frente com o próximo desafio para identificar o atributo com outlier")
+```
+
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:b28917e5a0
+## Identificando a posição do valor com oulier 
+
+A inspeção visual oferece um recurso interessante para verificar a existência de um oulier. No entanto, mais importante que saber da existência dessa anomalia, é importante a identificação do mesmo. Esta atividade tem como finalidade identificar a posição do exemplar com o problema de oulier. 
+
+
+*** =instructions
+
+O algoritmo que possibilita identifica o outlier é semelhante aos utilizados antes com uso do operador lógico para comparação e função $which()$ para descobrir a posição. 
+
+O algoritmo para ter os exemplares da classe <b>setosa</b> com outlier pode ser descrito como: 
+
+<ol>
+ <li>Selecionar o atributo que se deseja manipular $dataset$atributo$ e armazenar o resulatdo na variável <b>classes</b></span></li>
+ <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara $classes<b>==</b>"virginica"$, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
+ <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>virginica</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função $which()$. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
+ <li>Usar os indices para recuperar o valor dos exemplares, por exemplo, $dataset$atributo[indices]$</li>
+ <li>Analisar o gráfico identificar o valor de outlier e fazer a comparação, como no segundo passo desse algortimo.</li>
+ <li>Identificar os valores, seguindo procedimento semelhante ao descrito nos passos 3 e 4</li>
+</ol>
+
+
+
+
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+data("iris")
+library("ggplot2")
+
+classes <- iris$Species
+classes_setosa <- iris$Species=="virginica"
+classes_setosa_ex <- which(classes_setosa==TRUE)
+data_2<-as.data.frame(iris$Sepal.Length[classes_setosa_ex])
+
+ggplot(data_2, aes(x="virginica", y=data_2)) + 
++     geom_boxplot(aes(fill="virginica")) + 
++     ylab("Sepal Length") + ggtitle("Iris Boxplot") + scale_fill_manual(values=c(rgb(0.3, 0.5, 1)))
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+classes <- iris$Species
+classes_setosa <- iris$Species=="setosa"
+classes_setosa_ex <- which(classes_setosa)
+```
+
+*** =sct
+```{r}
+
 ```
