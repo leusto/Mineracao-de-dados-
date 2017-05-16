@@ -214,18 +214,11 @@ Faça as plotagens e marque a sentença que <b>não é verdadeira</b>:
 library(ggplot2)
 data("iris")
 
-histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
-
-histogram_versicolor <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram_versicolor + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="versicolor"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
-  
-  
-histogram_virginica <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram_virginica + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="virginica"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
+ggplot(iris, aes(x = iris$Sepal.Length, fill = Species)) +
+  geom_histogram(binwidth=0.1,colour = "black") +
+  facet_wrap(~ Species) +
+  guides(fill = FALSE) +  # to remove the legend
+  theme_bw()              # for clean look overall
   
 
 histogram <- ggplot(data=iris, aes(x=Sepal.Length))
