@@ -325,11 +325,13 @@ Com os índices salvos em uma varíavel (que na realidade será um vetor), este 
 
 
 *** =hint
+data("iris")
 
 *** =pre_exercise_code
 ```{r}
-
+data("iris")
 ```
+
 
 *** =sample_code
 ```{r}
@@ -379,4 +381,38 @@ test_object("sl_setosa_media",
             undefined_msg = "Tem certeza que definiu a variável `sl_setosa_media`!",
             incorrect_msg = "Você tem certeza que selecionou apenas õs exemplares da classe `setosa`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:6909085486
+## Calculando o desvio padrão
+
+A ideia desta atividade é repetir todo o exercício anterior, porém ao invés de calcular a média, deseja-se calcular o desvio padrão
+
+
+*** =instructions
+
+O desvio padrão é calculado com o uso da função dv
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
