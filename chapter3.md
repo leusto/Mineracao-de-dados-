@@ -207,6 +207,9 @@ Faça as plotagens e marque a sentença que <b>não é verdadeira</b>:
 - a classe setosa tem valores mais coesos em relação as outras classes
 - as três classes não apresentam interseção nos valores de Sepal.Lenght
 
+
+https://www.rdocumentation.org/packages/ggplot2/versions/2.2.1
+
 *** =hint
 
 *** =pre_exercise_code
