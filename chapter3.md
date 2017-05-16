@@ -169,9 +169,9 @@ data("iris")
 *** =sample_code
 ```{r}
 # Exemplo do histogram para a classe setosa
-histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
+#histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
+#histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
+#  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
 
 # Faça o historgama para a classe 'versicolor' e salve o resulatdo em histogram_versicolor
 
