@@ -215,7 +215,7 @@ library("ggplot2")
 
 *** =solution
 ```{r}
-box <- ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + 
+x <- ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + 
                 geom_boxplot(aes(fill=Species)) + 
                 ylab("Sepal Length") + ggtitle("Iris Boxplot") +
                 stat_summary(fun.y=mean, geom="point", shape=5, size=4)
@@ -224,10 +224,10 @@ box <- ggplot(data=iris, aes(x=Species, y=Sepal.Length)) +
 *** =sct
 ```{r}
 test_error()
-test_object("box",
-            undefined_msg = "Tem certeza que finalizou o desafio e descomentou o código que tem a variável `resul`!",
-            incorrect_msg = "Você tem certeza que calculou a média e o desvio para todas as classes dp atributo `Species`!")
-success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+test_object("x",
+            undefined_msg = "Make sure to define `x`!",
+            incorrect_msg = "Have you correctly assigned 5 to `x`!")
+success_msg("Good job! Head over to the next exercise")
 ```
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:bd72cd1f92
 ## Analisando valores fora do padrão (oulier)
@@ -252,5 +252,9 @@ ggplot(iris, aes(x = iris$Sepal.Length, fill = Species)) +
 
 *** =sct
 ```{r}
-
+test_error()
+test_object("x",
+            undefined_msg = "Make sure to define `x`!",
+            incorrect_msg = "Have you correctly assigned 5 to `x`!")
+success_msg("Good job! Head over to the next exercise")
 ```
