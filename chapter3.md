@@ -59,8 +59,15 @@ data("iris")
 
 
 
-# Imprima o valor como a sequencia de código abaixo:
+# A impressão dos resulatdos deve ser feia conforme códigos comentados abaixo. Após os cácluos de média e desvio, descomente-os para verificar o resultado.
 
+### DESCOMENTAR CODIGOS APOS CALCULOS DE MEDIA E DESVIO
+#resul <- data.frame(Classes=c("setosa", "versicolor", "virginica"),
+#                    Média=c(sl_setosa_media, sl_versicolor_media, sl_virginica_media),
+#                    Desvio=c(sl_setosa_desvio,sl_versicolor_desvio,sl_virginica_desvio)
+#                    )
+#print(resul)
+####
 
 ```
 
@@ -82,7 +89,7 @@ resul <- data.frame(Classes=c("setosa", "versicolor", "virginica"),
                     Média=c(sl_setosa_media, sl_versicolor_media, sl_virginica_media),
                     Desvio=c(sl_setosa_desvio,sl_versicolor_desvio,sl_virginica_desvio)
                     )
-
+print(resul)
 ```
 
 *** =sct
