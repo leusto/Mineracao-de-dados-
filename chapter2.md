@@ -308,8 +308,20 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 --- type:NormalExercise lang:r xp:100 skills:1 key:f97586016a
 ## Juntando os atributos <i>Sepal.Length</i> e <i>Species</i>
 
+O objetivo deste desafio é combinar os exercícios anteriores em uma única atividade que é o calculo da média dos exemplares do atributo descritivo <b>Sepal.Length</b> que pertencem a classe <b>setosa</b>. 
+
 
 *** =instructions
+O algoritmo para selecionar os exemplares da classe <b>setosa</b> deve ser usado integralmente nesta atividade, ou seja: 
+
+<ul>
+ <li>Selecionar o atributo que se deseja manipular <b>Species</b></li>
+ <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. 
+ <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>setosa</b> com a função <span style="font-style:italic;background:#e6f5ff">which()</span>.</li>
+</ul>
+
+Com os índices salvos em uma varíavel (que na realidade será um vetor), este deve ser usado para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média. 
+
 
 *** =hint
 
