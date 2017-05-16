@@ -265,9 +265,6 @@ O algoritmo para ter os exemplares da classe <b>setosa</b> com outlier pode ser 
 </ol>
 
 
-
-
-
 *** =hint
 
 *** =pre_exercise_code
@@ -288,17 +285,55 @@ ggplot(data_2, aes(x="virginica", y=data_2)) +
 
 *** =sample_code
 ```{r}
+# Selecione do dataset iris o atributo Species 
+# Salve o resultado na variável classes
+
+
+# Compare a sequencia de valores classes iguais a virginica
+# Salve o resultado na variável classes_virginica
+
+
+
+# Recupere a posição (indices) dos exemplares que pertencem a classe virginica
+# Salve na variável 'classes_virginica_ex'
+
+
+# Use a variavel 'classes_virginica_ex' como indice de iris$Sepal.Length 
+# e compare com valores < a 5.5
+# Salve o resultado na variavel outlier
+
+
+# A variavel oulier é um vetor de bolleano. Para pegar os valores TRUE, ou seja,
+# que satisfazem a condição (< 5.5), use a função which()
+# Salve o resultado na variavel outlier_indice
+
+
+
+# O resultado da variável outlier_indice deve ser usado como indice classes_setosa_ex.
+# Salve o resultado na variável outlier_ex
+
+
+
+# Imprima o valor da variável 'outlier_ex'
 
 ```
 
 *** =solution
 ```{r}
 classes <- iris$Species
-classes_setosa <- iris$Species=="setosa"
-classes_setosa_ex <- which(classes_setosa)
+classes_virginica <- iris$Species=="virginica"
+classes_virginica_ex <- which(classes_virginica)
+outlier <- iris$Sepal.Length[classes_virginica_ex] < 5.5
+outlier_indice <- which(outlier)
+outlier_ex <- classes_setosa_ex[outlier_indice]
+print(outlier_ex)
 ```
 
 *** =sct
 ```{r}
-
+test_error()
+test_object("outlier_ex",
+            undefined_msg = "Tenha certeza que foi feita a declaração da variável  `outlier_ex`!",
+            incorrect_msg = "O resultado da variável `outlier_ex` está icorreto. Verifique os passos do algoritmo explicados em `instructions`. ")
+success_msg("Good job! Perceba que o valor identificado é o mesmo que aparecia distânte da distribuição da variável virginica.")
 ```
