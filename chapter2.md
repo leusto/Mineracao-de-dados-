@@ -236,3 +236,71 @@ msg4 = "Tente novamente! Pense sobre o número de classes e não o total de exem
 
 test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
+
+
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:ddb49a486b
+## Selecionando os exemplares de uma classe específica
+
+O desafio deste exercício é recuperar apenas os exemplares da classe <b>setosa</b>. A solução é muito parecida com o que feito antes sobre a seleção dos valores de Sepal.Length acima da média. A diferença aqui é que o operador de comparação a ser usado é o igual (<b>==</b>). 
+
+
+*** =instructions
+O algoritmo para ter os exemplares da classe  <b>setosa</b> pode ser descrito como: 
+
+<ul>
+ <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo) e armazenar o resulatdo na variável <b>classes</b></span></li>
+ <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">classes<b>==</b>"setosa"</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
+ <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>setosa</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
+</ul>
+
+
+*** =hint
+data("iris")
+
+*** =pre_exercise_code
+```{r}
+data("iris")
+```
+
+*** =sample_code
+```{r}
+# Selecione do dataset iris o atributo Species 
+# Salve o resultado na variável classes
+
+
+# Compare a sequencia de valores classes iguais a setosa
+# Salve o resultado na variável classes_setosa
+
+
+
+
+# Recupere a posição (indices) dos exemplares que tem pertencem a classe setosa
+# Salve na variável 'classes_setosa_ex'
+
+
+# Imprima os valores dos indices com a função print()
+
+
+
+```
+
+*** =solution
+```{r}
+classes<-iris$Species
+classes_setosa<-iris$Species=="setosa"
+classes_setosa_ex<-which(classes_setosa)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("classes_setosa_ex",
+            undefined_msg = "Tem certeza que definiu a variável `classes_setosa_ex`!",
+            incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+```
