@@ -1,17 +1,6 @@
 ---
 title       : Manipulação sobre o dataset
-description : Este capitulo consiste em ....
-- selecionar uma variavel
-- calcular a media, desvio de uma variavel
-
-- boxplot
-- outlier
-
-- grafico de dispersao
-
-- gráfico de histograma
-
-
+description : Este capitulo consiste em ....- selecionar uma variavel- calcular a media, desvio de uma variavel- boxplot- outlier- grafico de - dispersao - gráfico de histograma
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:66f49495b2
 ## Selecionando um único atributo do dataset
@@ -177,15 +166,13 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
-## Selecionando uma única variável do dataset
+## Manipulando a variável categorica do dataset
 
-Para a seleção
+A coluna <b>Species</b> refere-se ao atributo categorico do dataset. É por meio dela que se classifica (ou rotula) as plantas Iris. Deseja-se saber quais os tipos de plantas Iris existem no datase.
 
 
 *** =instructions
-22222  dataset que será usado neste exercício chama-se iris, o qual consiste de um tipo de planta com 3 categorias de espécies.
-
-Esta é uma base de dados que já existe no datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris
+Aqui deseja-se basicamente que seja selecionado o atributo <b>Species</b>, nos mesmos moldes do que feito antes com o atributos Sepal.Length.
 
 *** =hint
 data("iris")
@@ -198,21 +185,23 @@ data("iris")
 
 *** =sample_code
 ```{r}
-#print(iris)
+# recuperar os valores do atributo Species e salvá-los na variável classes
+
+# imprimir os valores da variável 'classes'
 ```
 
 *** =solution
 ```{r}
-x<-iris["Sepal.Length"]
+classes<-iris["Species"]
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            undefined_msg = "Make sure to define `x`!",
-            incorrect_msg = "Have you correctly assigned 5 to `x`!")
-success_msg("Good job! Head over to the next exercise")
+test_object("classes",
+            undefined_msg = "Tenha certeza que definiu a variável `classes`!",
+            incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
 ---
@@ -220,18 +209,18 @@ success_msg("Good job! Head over to the next exercise")
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:e74c30a746
-## 2222 Multiple Choice Exercise Title
+## Em relação as espécies de planta Iris: 
 
-2222 This is the assignment.
-How much is `2 + 2`?
+Qual o total de classes presentes no dataset?
 
 *** =instructions
 - 2
 - 3
 - 4
+- 150
 
 *** =hint
-Here's a hint: think about your time in primary school.
+Pense sobre os tipos possóveis de classes e não do total de exemplares no dataset.
 
 *** =pre_exercise_code
 ```{r}
@@ -240,8 +229,10 @@ Here's a hint: think about your time in primary school.
 
 *** =sct
 ```{r}
-msg1 = "Try again! Think about your time in school."
-msg2 = "Summing two even numbers always leads to another even number. Try again."
-msg3 = "Well done. Proceed to the next exercise"
-test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
+msg1 = "Tente novamente! Pense sobre o número de classes."
+msg2 = "Well done. Continue com os exercícios"
+msg3 = "Tente novamente! Pense sobre o número de classes."
+msg4 = "Tente novamente! Pense sobre o número de classes e não o total de exemplares."
+
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
