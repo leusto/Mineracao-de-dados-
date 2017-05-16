@@ -191,3 +191,65 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
+## <<<New Exercise>>>
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+data("iris")
+library("ggplot2")
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+box <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
+box + geom_boxplot(aes(fill=Species)) + 
+  ylab("Sepal Length") + ggtitle("Iris Boxplot") +
+  stat_summary(fun.y=mean, geom="point", shape=5, size=4) 
+```
+
+*** =sct
+```{r}
+test_object("box",
+            undefined_msg = "Tem certeza que finalizou o desafio e descomentou o código que tem a variável `resul`!",
+            incorrect_msg = "Você tem certeza que calculou a média e o desvio para todas as classes dp atributo `Species`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+```
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:bd72cd1f92
+## Analisando valores fora do padrão (oulier)
+
+
+Um valor fora do padrão, também chamado de outlier, consiste em uma medida que foge da distribuição 
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+ggplot(iris, aes(x = iris$Sepal.Length, fill = Species)) +
+  geom_histogram(binwidth=0.1,colour = "black") +
+  facet_wrap(~ Species) +
+  guides(fill = FALSE) +  # to remove the legend
+  theme_bw()              # for clean look overall  
+```
+
+*** =sct
+```{r}
+
+```
