@@ -225,32 +225,3 @@ test_object("x",
             incorrect_msg = "Have you correctly assigned 5 to `x`!")
 success_msg("Good job! Head over to the next exercise")
 ```
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:bd72cd1f92
-## Analisando valores fora do padrão (oulier)
-
-
-Um valor fora do padrão, também chamado de outlier, consiste em uma medida que foge da distribuição 
-
-
-
-*** =instructions
-
-*** =hint
-
-*** =pre_exercise_code
-```{r}
-ggplot(iris, aes(x = iris$Sepal.Length, fill = Species)) +
-  geom_histogram(binwidth=0.1,colour = "black") +
-  facet_wrap(~ Species) +
-  guides(fill = FALSE) +  # to remove the legend
-  theme_bw()              # for clean look overall  
-```
-
-*** =sct
-```{r}
-test_error()
-test_object("x",
-            undefined_msg = "Make sure to define `x`!",
-            incorrect_msg = "Have you correctly assigned 5 to `x`!")
-success_msg("Good job! Head over to the next exercise")
-```
