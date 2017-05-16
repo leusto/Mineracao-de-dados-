@@ -1,5 +1,5 @@
 ---
-title       : Teste de gamfication
+title       : Análise Exploratória dos Dados
 description : Este capitulo foca a gamification
 
 --- type:NormalExercise lang:r xp:100 skills:1,4 key:d3148b4c04
