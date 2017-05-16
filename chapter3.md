@@ -195,8 +195,9 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
-## teste
+## Analisando valores fora do padrão (oulier)
 
+Um valor fora do padrão, também chamado de outlier, consiste em uma medida que extrapola os limites estabelecitos pelos quartis dos valores dos dados. A identificação desse valor pode ser feita com o uso do boxplot
 
 *** =instructions
 
@@ -206,6 +207,8 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```{r}
 data("iris")
 library("ggplot2")
+ggplot(data=iris, aes(x=Species, y=Sepal.Length)) + geom_boxplot(aes(fill=Species)) + ylab("Sepal Length") + ggtitle("Iris Boxplot") + stat_summary(fun.y=mean, geom="point", shape=5, size=4)
+```
 ```
 
 *** =sample_code
@@ -215,7 +218,7 @@ library("ggplot2")
 
 *** =solution
 ```{r}
-x <- 2
+x <- "setosa"
 ```
 
 *** =sct
