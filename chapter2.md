@@ -286,7 +286,6 @@ data("iris")
 # Imprima os valores dos indices com a função print()
 
 
-
 ```
 
 *** =solution
@@ -303,4 +302,33 @@ test_object("classes_setosa_ex",
             undefined_msg = "Tem certeza que definiu a variável `classes_setosa_ex`!",
             incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:f97586016a
+## Juntando os atributos <i>Sepal.Length</i> e <i>Species</i>
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
