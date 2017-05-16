@@ -253,7 +253,7 @@ O desafio deste exercício é recuperar apenas os exemplares da classe <b>setosa
 O algoritmo para ter os exemplares da classe  <b>setosa</b> pode ser descrito como: 
 
 <ul>
- <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo) e armazenar o resulatdo na variável <b>classes</b></span></li>
+ <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo</span>) e armazenar o resulatdo na variável <b>classes</b></span></li>
  <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">classes<b>==</b>"setosa"</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
  <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>setosa</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
 </ul>
@@ -393,7 +393,7 @@ A ideia desta atividade é repetir todo o exercício anterior, porém ao invés 
 
 *** =instructions
 
-O desvio padrão é calculado com o uso da função dv
+O desvio padrão é calculado com o uso da função <span style="font-style:italic;background:#e6f5ff">sd()</span>.
 
 *** =hint
 
@@ -404,15 +404,49 @@ O desvio padrão é calculado com o uso da função dv
 
 *** =sample_code
 ```{r}
+# Selecione do dataset iris o atributo Species 
+# Salve o resultado na variável classes
 
+
+# Compare a sequencia de valores classes iguais a setosa
+# Salve o resultado na variável classes_setosa
+
+
+
+
+# Recupere a posição (indices) dos exemplares que tem pertencem a classe setosa
+# Salve na variável 'classes_setosa_ex'
+
+
+# Recupere do dataset iris o atributo Sepal.Length
+# Salve na variável 'sl'
+
+
+# Selecione da variável sl apenas os exemplares que pertencem a classe setosa (classes_setosa_ex)
+# Salve na variável sl_setosa
+
+
+# Calcule o desvio da variável sl_setosa com o uso da função sd().
+# Salve o resultado na variável  sl_setosa_desvio
+
+
+# Imprima o valor da variável sl_setosa_desvio
 ```
 
 *** =solution
 ```{r}
-
+classes <- iris$Species
+classes_setosa <- iris$Species=="setosa"
+classes_setosa_ex <- which(classes_setosa)
+sl <- iris$Sepal.Length
+sl_setosa <- sl[classes_setosa_ex]
+sl_setosa_desvio <- sd(sl_setosa)
 ```
 
 *** =sct
 ```{r}
-
+test_object("sl_setosa_desvio",
+            undefined_msg = "Tem certeza que definiu a variável `sl_setosa_desvio`!",
+            incorrect_msg = "Você tem certeza que selecionou apenas õs exemplares da classe `setosa`!")
+success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
