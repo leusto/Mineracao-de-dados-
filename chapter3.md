@@ -120,7 +120,7 @@ qual das sentenças abaixo, com interpretações dos resulatdos de média e desv
 - a classe setosa é melhor separada das demais classes
 - as classes versicolor e virginica têm valores que se sobrepõem
 - a classe setosa tem valores mais coesos em relação as outras classes
-- as três classes estão apresentam interseção nos valores de Sepal.Lenght
+- as três classes não apresentam interseção nos valores de Sepal.Lenght
 
 *** =hint
 Pense no conceito de média e desvio padrão.
@@ -135,14 +135,14 @@ Pense no conceito de média e desvio padrão.
 msg1 = "Tente novamente! Note que a média tem valor distinto às outras classes e o desvio não é grande o suficiente para causar sobreposição com as demais classes."
 msg2 = "Tente novamente! É uma sentença verdadeira. Embora a média possua valores distintos, o valor do desvio é alto o suficiente para causar sobreposição das classes."
 msg3 = "Tente novamente! Verdade, o desvio padrão desta classe é menor que das demais classes."
-msg4 = "Well done. Continue com os exercício."
+msg4 = "Well done. As classes tem sim intersesão de classes como será visto no próximo exercício."
 
 test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:07dccfea63
-## Entendendo os reslatdos de média com uso de explorações gráficas
+## Entendendo os resultados de média com uso de explorações gráficas
 
 
 
@@ -150,14 +150,21 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 *** =instructions
 
 *** =hint
+library(ggplot2)
+data("iris")
 
 *** =pre_exercise_code
 ```{r}
-
+library(ggplot2)
+data("iris")
 ```
 
 *** =sample_code
 ```{r}
+
+histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
+histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
+  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
 
 ```
 
