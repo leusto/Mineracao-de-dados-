@@ -197,9 +197,11 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:faf1ec640e
 ## Entendendo os resultados de média e desvio com uso de explorações gráficas
 
-Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na construção de um histograma. Esse é um tipo de gráfico que mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. Pede-se que faça a construção do boxplot para a Species versicolor.
+Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na análise de um método gráfico chamado histograma. O gráfico mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. A construção será feita com o uso de um pacote chamado ggplo: https://www.rdocumentation.org/packages/ggplot2/versions/2.2.1.
 
-Faça as plotagens e marque a sentença que <b>não é verdadeira</b>:
+A direita estão dois gráficos gerados, o que ficará incialmente visivel trata-se do histograma para cada classe. Adicionalemnte, clocando no botão Previous Plot, será possível visualizar os histogramas combinados. 
+
+A partir da análise dos dois gráficos, marque a sentença que <b>não é verdadeira</b>:
 
 *** =instructions
 - a classe setosa é melhor separada das demais classes
@@ -208,7 +210,7 @@ Faça as plotagens e marque a sentença que <b>não é verdadeira</b>:
 - as três classes não apresentam interseção nos valores de Sepal.Lenght
 
 
-https://www.rdocumentation.org/packages/ggplot2/versions/2.2.1
+
 
 *** =hint
 
