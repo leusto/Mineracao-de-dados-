@@ -2,87 +2,85 @@
 title       : Análise Exploratória dos Dados
 description : Este capitulo foca a gamification
 
---- type:NormalExercise lang:r xp:100 skills:1,4 key:d3148b4c04
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:e74c30a746
-## 2222 Multiple Choice Exercise Title
+--- type:NormalExercise lang:r xp:100 skills:1 key:83990c831d
+## Comparando médias
 
-2222 This is the assignment.
-How much is `2 + 2`?
+Nos dois últimos exercícios do capítulo anterior vocês foram desafiados a calcular a média e o desvio padrão de uma classe específicao do dataset. Agora, neste exercício, mantendo o atributo descritivo <b>Sepal.Length</b> pede-se que calcule a média e o desvio para todas as classes do dataset, ou seja, <b>setosa</b>,<b>versicolor</b> e <b>virginica</b>.
+
 
 *** =instructions
-- 2
-- 3
-- 4
+Caso não tenha definido a sua própria lógica para selecionar os exemplares de cada classe, segue uma vez mais a opção algortimica: 
+
+<ul>
+ <li>Selecionar o atributo que se deseja manipular <b>Species</b></li>
+ <li>Comparar a sequência de valores com a classe desejada. 
+ <li>Recuperar os indices (posição) dos exemplares que pertencem a classe desejada com a função <span style="font-style:italic;background:#e6f5ff">which()</span>.</li>
+</ul>
+
+Com os índices salvos em uma varíavel (que na realidade será um vetor), este deve ser usado para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média ou o desvio padrão. 
+
+
 
 *** =hint
-Here's a hint: think about your time in primary school.
+data("iris")
 
 *** =pre_exercise_code
 ```{r}
-# no pec
+data("iris")
+```
+
+*** =sample_code
+```{r}
+# Calcule a média  do atributo Sepal.Length para a classe setosa com o uso da função mean().
+# Salve o resultado na variável  sl_setosa_media
+
+
+# Calcule o desvio  do atributo Sepal.Length para a classe setosa com o uso da função sd().
+# Salve o resultado na variável  sl_setosa_desvio
+
+
+# Calcule a média  do atributo Sepal.Length para a classe versicolor com o uso da função mean().
+# Salve o resultado na variável  sl_versicolor_media
+
+
+# Calcule o desvio  do atributo Sepal.Length para a classe versicolor com o uso da função sd().
+# Salve o resultado na variável  sl_versicolor_desvio
+
+
+# Calcule a média  do atributo Sepal.Length para a classe virginica com o uso da função mean().
+# Salve o resultado na variável  sl_virginica_media
+
+
+# Calcule o desvio  do atributo Sepal.Length para a classe virigina com o uso da função sd().
+# Salve o resultado na variável  sl_virginica_desvio
+
+
+
+
+
+# Imprima o valor como a sequencia de código abaixo:
+
+
+```
+
+*** =solution
+```{r}
+sl_setosa<-iris$Sepal.Length[which(iris$Species=="setosa")]
+sl_setosa_media <- mean(sl_setosa)
+sl_setosa_desvio <- sd(sl_setosa)
+#---
+sl_versicolor<-iris$Sepal.Length[which(iris$Species=="versicolor")]
+sl_versicolor_media <- mean(sl_versicolor)
+sl_versicolor_desvio <- sd(sl_versicolor)
+#---
+sl_virginica<-iris$Sepal.Length[which(iris$Species=="virginica")]
+sl_virginica_media <- mean(sl_virginica)
+sl_virginica_desvio <- sd(sl_virginica)
+
 ```
 
 *** =sct
 ```{r}
-msg1 = "Try again! Think about your time in school."
-msg2 = "Summing two even numbers always leads to another even number. Try again."
-msg3 = "Well done. Proceed to the next exercise"
-test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
+
 ```
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:d54d47eb1b
-## 3333 Multiple Choice Exercise Title
-
-2222 This is the assignment.
-How much is `2 + 2`?
-
-*** =instructions
-- 2
-- 3
-- 4
-
-*** =hint
-Here's a hint: think about your time in primary school.
-
-*** =pre_exercise_code
-```{r}
-# no pec
-```
-
-*** =sct
-```{r}
-msg1 = "Try again! Think about your time in school."
-msg2 = "Summing two even numbers always leads to another even number. Try again."
-msg3 = "Well done. Proceed to the next exercise"
-test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
-```
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:da24274c39
-## 4444 Multiple Choice Exercise Title
-
-2222 This is the assignment.
-How much is `2 + 2`?
-
-*** =instructions
-- 2
-- 3
-- 4
-
-*** =hint
-Here's a hint: think about your time in primary school.
-
-*** =pre_exercise_code
-```{r}
-# no pec
-```
-
-*** =sct
-```{r}
-msg1 = "Try again! Think about your time in school."
-msg2 = "Summing two even numbers always leads to another even number. Try again."
-msg3 = "Well done. Proceed to the next exercise"
-test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
-```
-
-... _rest of exercise omitted_
