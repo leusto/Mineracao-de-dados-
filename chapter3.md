@@ -141,57 +141,6 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:07dccfea63
-## Entendendo os resultados de média e desvio com uso de explorações gráficas
-
-Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na construção de um histograma. Esse é um tipo de gráfico que mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. Pede-se que faça a construção do boxplot para a Species versicolor.
-
-
-
-*** =instructions
-Exemplo da construção do histograma para a Specie setosa:
-
-histogram <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
-
-
-*** =hint
-library(ggplot2)
-data("iris")
-
-*** =pre_exercise_code
-```{r}
-library(ggplot2)
-data("iris")
-```
-
-*** =sample_code
-```{r}
-# Exemplo do histogram para a classe setosa
-#histogram_setosa <- ggplot(data=iris, aes(x=Sepal.Length))
-#histogram_setosa + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="setosa"))) + 
-#  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
-
-# Faça o historgama para a classe 'versicolor' e salve o resulatdo em histogram_versicolor
-
-```
-
-*** =solution
-```{r}
-histogram_versicolor <- ggplot(data=iris, aes(x=Sepal.Length))
-histogram_versicolor + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="versicolor"))) + 
-  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length")
-
-```
-
-*** =sct
-```{r}
-test_object("histogram_versicolor",
-            incorrect_msg = "Você tem certeza que fez o histograma para atributo `Species=versicolor`!")
-success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
-```
-
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:faf1ec640e
@@ -204,10 +153,10 @@ A direita estão dois gráficos gerados, o que ficará incialmente visivel trata
 A partir da análise dos dois gráficos, marque a sentença que <b>não é verdadeira</b>:
 
 *** =instructions
-- a classe setosa é melhor separada das demais classes
-- as classes versicolor e virginica têm valores que se sobrepõem
-- a classe setosa tem valores mais coesos em relação as outras classes
-- as três classes não apresentam interseção nos valores de Sepal.Lenght
+- para o atributo analisado, não há sobreposição entre as classes setosa e virginica
+- as classes versicolor e virginica têm alto nível de sobreposição
+- a classe virgina tem valores mais coesos em relação as outras classes, ou seja, a distribuição é mais concentrada. 
+- as três classes apresentam algum grau de interseção nos valores de Sepal.Lenght
 
 
 
@@ -234,10 +183,11 @@ ggplot(iris, aes(x = iris$Sepal.Length, fill = Species)) +
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Note que a média tem valor distinto às outras classes e o desvio não é grande o suficiente para causar sobreposição com as demais classes."
-msg2 = "Tente novamente! É uma sentença verdadeira. Embora a média possua valores distintos, o valor do desvio é alto o suficiente para causar sobreposição das classes."
-msg3 = "Tente novamente! Verdade, o desvio padrão desta classe é menor que das demais classes."
-msg4 = "Well done. As classes tem sim intersesão de classes como será visto no próximo exercício."
+msg1 = "Tente novamente! Note que avaliando os histogramas isolados, percebe-se que as classes estão bem separadas."
+msg2 = "Tente novamente! É uma sentença verdadeira. Basta olhar para os valores de Sepal Length para ver que há grande sobreposição nos valores."
+msg3 = "Well done. Os valores do atributo virginica variam de 5 até 8. A maior coesão aparece para a classe setosa."
+msg4 = "Tente novamente! Verdade, veja o gráfico com todos os histogramas plotados."
 
-test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
+
+test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
