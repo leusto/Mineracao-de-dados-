@@ -187,8 +187,10 @@ histogram_versicolor + geom_histogram(binwidth=0.1, color="black", aes(fill=(Spe
 
 *** =sct
 ```{r}
-test_object("histogram_versicolor",
+test_object(histogram_versicolor <- ggplot(data=iris, aes(x=Sepal.Length))
+histogram_versicolor + geom_histogram(binwidth=0.1, color="black", aes(fill=(Species="versicolor"))) + 
+  xlab("Sepal.Length") +  ylab("Frequencia") + ggtitle("Histograma do atributo Sepal Length"),
             undefined_msg = "Tem certeza que salvou a plotagem na variável `histogram_versicolor`!",
-            incorrect_msg = "Você tem certeza que fez o histograma para atributo `Species="versicolor"`!")
+            incorrect_msg = "Você tem certeza que fez o histograma para atributo `Species=versicolor`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
