@@ -223,7 +223,7 @@ box + geom_boxplot(aes(fill=Species)) +
 
 *** =sct
 ```{r}
-test_object(box,
+test_object("box",
             undefined_msg = "Tem certeza que finalizou o desafio e descomentou o código que tem a variável `resul`!",
             incorrect_msg = "Você tem certeza que calculou a média e o desvio para todas as classes dp atributo `Species`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
