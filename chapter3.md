@@ -141,8 +141,6 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 
-
-
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:faf1ec640e
 ## Entendendo os resultados de média e desvio com uso de explorações gráficas
 
