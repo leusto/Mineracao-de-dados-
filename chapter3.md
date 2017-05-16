@@ -77,6 +77,11 @@ sl_versicolor_desvio <- sd(sl_versicolor)
 sl_virginica<-iris$Sepal.Length[which(iris$Species=="virginica")]
 sl_virginica_media <- mean(sl_virginica)
 sl_virginica_desvio <- sd(sl_virginica)
+#---
+resul <- data.frame(Classes=c("setosa", "versicolor", "virginica"),
+                    Média=c(sl_setosa_media, sl_versicolor_media, sl_virginica_media),
+                    Desvio=c(sl_setosa_desvio,sl_versicolor_desvio,sl_virginica_desvio)
+                    )
 
 ```
 
