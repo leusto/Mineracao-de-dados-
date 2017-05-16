@@ -277,9 +277,9 @@ classes_setosa <- iris$Species=="virginica"
 classes_setosa_ex <- which(classes_setosa==TRUE)
 data_2<-as.data.frame(iris$Sepal.Length[classes_setosa_ex])
 
-ggplot(data_2, aes(x="virginica", y=data_2)) + 
-+     geom_boxplot(aes(fill="virginica")) + 
-+     ylab("Sepal Length") + ggtitle("Iris Boxplot") + scale_fill_manual(values=c(rgb(0.3, 0.5, 1)))
+box_virginica <- ggplot(data_2, aes(x="virginica", y=data_2)) + 
+  geom_boxplot(aes(fill="virginica")) + 
+  ylab("Sepal Length") + ggtitle("Iris Boxplot") + scale_fill_manual(values=c(rgb(0, 0.8, 1)))
 
 ```
 
