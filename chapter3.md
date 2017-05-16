@@ -99,3 +99,46 @@ test_object("resul",
             incorrect_msg = "Você tem certeza que calculou a média e o desvio para todas as classes dp atributo `Species`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
+
+
+
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:6c83d2ee76
+## Interpretando os resultados de média e desvio apresentados no exercício anterior. 
+
+Em relação aos resultados abaixo obtidos do desafio anterior:
+
+     Classes Média    Desvio
+1     setosa 5.006 0.3524897
+2 versicolor 5.936 0.5161711
+3  virginica 6.588 0.6358796
+
+
+qual das sentenças abaixo, com interpretações dos resulatdos de média e desvio, <b>não é verdadeira</b>:
+
+
+*** =instructions
+- a classe setosa é melhor separada das demais classes
+- as classes versicolor e virginica têm valores que se sobrepõem
+- a classe setosa tem valores mais coesos em relação as outras classes
+- as três classes estão apresentam interseção nos valores de Sepal.Lenght
+
+*** =hint
+Pense no conceito de média e desvio padrão.
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+msg1 = "Tente novamente! Note que a média tem valor distinto às outras classes e o desvio não é grande o suficiente para causar sobreposição com as demais classes."
+msg2 = "Tente novamente! É uma sentença verdadeira. Embora a média possua valores distintos, o valor do desvio é alto o suficiente para causar sobreposição das classes."
+msg3 = "Tente novamente! Verdade, o desvio padrão desta classe é menor que das demais classes."
+msg4 = "Well done. Continue com os exercício."
+
+test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
+```
