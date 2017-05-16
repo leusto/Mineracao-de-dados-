@@ -195,7 +195,7 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
-## <<<New Exercise>>>
+## teste
 
 
 *** =instructions
