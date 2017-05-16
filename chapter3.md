@@ -102,9 +102,6 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 
-
-
-
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:6c83d2ee76
 ## Interpretando os resultados de média e desvio apresentados no exercício anterior. 
 
@@ -141,4 +138,35 @@ msg3 = "Tente novamente! Verdade, o desvio padrão desta classe é menor que das
 msg4 = "Well done. Continue com os exercício."
 
 test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:07dccfea63
+## Entendendo os reslatdos de média com uso de explorações gráficas
+
+
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
