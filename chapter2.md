@@ -283,24 +283,40 @@ data("iris")
 # Salve na variável 'classes_setosa_ex'
 
 
-# Imprima os valores dos indices com a função print()
+
+# Recupere do dataset iris o atributo Sepal.Length
+# Salve na variável 'sl'
+
+
+# Selecione da variável sl apenas os exemplares que pertencem a classe setosa (classes_setosa_ex)
+# Salve na variável sl_setosa
+
+
+# Calcule a média da variável sl_setosa com o uso da função mean().
+# Salve o resultado na variável  sl_setosa_media
+
+
+# Imprima o valor da variável sl_setosa_media
 
 
 ```
 
 *** =solution
 ```{r}
-classes<-iris$Species
-classes_setosa<-iris$Species=="setosa"
-classes_setosa_ex<-which(classes_setosa)
+classes <- iris$Species
+classes_setosa <- iris$Species=="setosa"
+classes_setosa_ex <- which(classes_setosa)
+sl <- iris$Sepal.Length
+sl_setosa <- sl[classes_setosa_ex]
+sl_setosa_media <- mean(sl_setosa)
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("classes_setosa_ex",
-            undefined_msg = "Tem certeza que definiu a variável `classes_setosa_ex`!",
-            incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
+test_object("sl_setosa_media",
+            undefined_msg = "Tem certeza que definiu a variável `sl_setosa_media`!",
+            incorrect_msg = "Você tem certeza que selecionou apenas õs exemplares da classe `setosa`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
 
@@ -332,7 +348,21 @@ Com os índices salvos em uma varíavel (que na realidade será um vetor), este 
 
 *** =sample_code
 ```{r}
+# Selecione do dataset iris o atributo Species 
+# Salve o resultado na variável classes
 
+
+# Compare a sequencia de valores classes iguais a setosa
+# Salve o resultado na variável classes_setosa
+
+
+
+
+# Recupere a posição (indices) dos exemplares que tem pertencem a classe setosa
+# Salve na variável 'classes_setosa_ex'
+
+
+# Imprima os valores dos indices com a função print()
 ```
 
 *** =solution
