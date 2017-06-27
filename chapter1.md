@@ -86,12 +86,12 @@ test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 --- type:NormalExercise lang:r xp:100 skills:1 key:850307365a
 ## Conhecendo os atributos do dataset **iris**
 
-Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos.
+Este exercício consiste em carregar um dataset e fazer explorações para a descoberta sobre os atributos do mesmo.
 
 
 *** =instructions
 
-O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *names()* cujo argumento é a base de dados. 
+A descoberta deste metadados (e dos próximos também) será feita com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris deve-se usar a função *names()* com parâmetro o nome da variável que contém o dataset carregado, nesse caso do exercício, o próprio nome do dataset. 
 
 
 *** =hint
@@ -105,8 +105,8 @@ data("iris")
 
 *** =sample_code
 ```{r}
-# verificar o nome dos atributos dataset iris
-# atribua o resultado com os nomes dos atributos na variável n
+# verificar o nome dos atributos do dataset iris
+# atribuir o resultado com o nome dos atributos à variável n
 
 # para visualziar o valor da variável, use a função print()
 ```
@@ -140,7 +140,7 @@ Qual o nome dos atributos?
 - "Sepal.Length","Sepal.Width","Petal.Length","Petal.Width" e "Species"
 
 *** =hint
-Para visualizar o resultado de uma variável, use a função *print()*
+Para visualizar o resultado de uma variável use a função *print()*
 
 *** =pre_exercise_code
 ```{r}
@@ -150,8 +150,8 @@ Para visualizar o resultado de uma variável, use a função *print()*
 *** =sct
 ```{r}
 msg1 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/names."
-msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
-msg3 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão."
+msg3 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão."
 msg4 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
@@ -159,12 +159,12 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 --- type:NormalExercise lang:r xp:100 skills:1 key:5cb0c44603
 ## Conhecendo os atributos do dataset *iris*
 
-Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+Em continuidade aos exercícios de explorações iniciais, o desafio aqui é descobrir sobre a estrutura do dataset.
 
 
 *** =instructions
 
-O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *str()* cujo argumento é a base de dados. 
+A descoberta da estrutura do dataset para o levantamento das informações adicionais (metadados) será feito com uso da função *str()* cujo parâmetro é o nome do dataset (ou da variável usada para armazenar o dataset). O resultado do uso desta função é a dimensão do dataset, o nome dos atributos, o tipo dos atributos e uma amostra dos valores de cada variável.
 
 
 *** =hint
@@ -178,8 +178,8 @@ data("iris")
 
 *** =sample_code
 ```{r}
-# verificar o nome dos atributos dataset iris
-# atribua o resultado da dimensão a variável s
+# verificar a estrtura do dataset iris
+# atribuir o resultado da estrtura a variável s
 
 
 ```
@@ -201,7 +201,7 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 ---
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:43ef61a87b
-## Em relação aos atributos do dataset iris:
+## Em relação aos do dataset iris:
 
 Quais os tipos dos atributos?
 
@@ -221,10 +221,10 @@ Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
-msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
+msg1 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da estrutura."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da estrutura."
 msg3 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
-msg4 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg4 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da estrtura para obter estas informações."
 test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
