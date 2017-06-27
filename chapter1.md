@@ -84,7 +84,7 @@ test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:850307365a
-## Conhecendo os atributos do dataset **iris**
+## Conhecendo os atributos do dataset *iris*
 
 Este exercício consiste em carregar um dataset e fazer explorações para a descoberta sobre os atributos do mesmo.
 
