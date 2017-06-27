@@ -1,22 +1,22 @@
 ---
-title       : Criação de metadados sobre o dataset
-description : Este capitulo consiste em ....
+title       : Criação de metadados sobre um dataset
+description : Este capitulo consiste em analisar um dataset para fazer descobertas sobre o dataset com a finalidade de conhecer o mesmo. O resultado destas análise é uma série de informações que podem ser usadas a porteiori para dicidir sobre os tipos de pré-processamentos necessários e também os tipos de algoritmos de aprendizagem de máquina são mais adequados para uso. A este resultado chamaremos de <b>metadados</b>.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Análise Exploratória de Dados
 
-Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre o mesmo.
+O exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre o mesmo com a finalidade de conhecer melhor os dados que serão analisados.
 
-O dataset utilizado neste exercício chama-se Iris, o qual consiste de um tipo de planta descrita por quatro atributos descritivos (largura de sépala, largura de pétala, comprimeto de sépala e comprimeto de pétala) e um atributo classificiatório que pode ser definido por 3 categorias de espécies.
+O dataset utilizado neste exercício chama-se Iris, o qual consiste de um tipo de planta descrita por quatro atributos descritivos (largura de sépala, largura de pétala, comprimeto de sépala e comprimeto de pétala) e um atributo classificiatório que pode ser definido em 3 categorias de espécies.
 
-Este é um dataset que disponível no repositório do Datacamp e, portanto não é necessário uma carga de dados externa. O carregamento do dataset é feito com o uso de uma função chamada *data*, tendo como argumento o nome do dataset, nesse caso, iris.
+Este é um dataset disponível no repositório do Datacamp e, portanto não é necessário a carga de dados. O carregamento é feito com o uso de uma função chamada *data()*, tendo como argumento o nome do dataset, nesse caso, iris.
 
-Para a visualização dos dados e futuras manipulações, o acesso deve ser feito com o uso do nome *iris*.
+Após o carregamento dos dados, a visualização dos mesmos e futuras manipulações podem ser obtidas com o uso do nome *iris*.
 
-Com o dataset carregado procura-se então enriquecer as informações como a verificação da dimensão do dataset e descobrimentos sobre os atributos do mesmo como nome, estrutura e tipos.
+Com o dataset carregado procura-se então enriquecer as informações do mesmo como a descoberta da dimensão (número de linhas - exemplares e colunas - atributos), o nome dos atributos, a estrutura e tipos dos atributos.
 
-O levantamento destas informações adicionais, chamado aqui de metadados, será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo argumento é o nome do dataset. 
+O levantamento destas informações adicionais, chamado aqui de metadados, será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo parãmetro é o nome do dataset. 
 
 
 
@@ -35,7 +35,7 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar a dimensão do dataset iris
-# atribua o resusltado da dimensão a variável d
+# atribuir o resusltado da dimensão a variável d
 ```
 
 *** =solution
@@ -76,7 +76,7 @@ Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Caso precise, use a função  *print()* e o nome da variável como argumento para obter estas informações."
+msg1 = "Tente novamente! Caso precise, use *print()* e o nome da variável como argumento dessa função para obter as informações solicitadas."
 msg2 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 msg3 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
 msg4 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
