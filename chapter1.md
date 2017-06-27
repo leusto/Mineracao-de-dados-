@@ -6,22 +6,22 @@ description : Este capitulo consiste em ....
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Análise Exploratória de Dados
 
-Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre o mesmo.
 
-O dataset que será usado neste exercício chama-se iris, o qual consiste de um tipo de planta com 3 categorias de espécies.
+O dataset utilizado neste exercício chama-se Iris, o qual consiste de um tipo de planta descrita por quatro atributos descritivos (largura de sépala, largura de pétala, comprimeto de sépala e comprimeto de pétala) e um atributo classificiatório que pode ser definido por 3 categorias de espécies.
 
-Esta é uma base de dados que já existe no repositório do datacamp. O carregamento da base será feito com o uso de uma função chamada data, tendo como argumento o nome do dataset iris.
+Este é um dataset que disponível no repositório do Datacamp e, portanto não é necessário uma carga de dados externa. O carregamento do dataset é feito com o uso de uma função chamada *data*, tendo como argumento o nome do dataset, nesse caso, iris.
 
-Para a manipulação dos dados deste dataset deve-se chamar pelo nome <b>iris<b>.
+Para a visualização dos dados e futuras manipulações, o acesso deve ser feito com o uso do nome *iris*.
 
-Com o dataset carregado procura-se então enriquecer as informações com a verificação da dimensão do dataset e conhecimentos sobre os atributos como nome, estrutura e tipos.
+Com o dataset carregado procura-se então enriquecer as informações como a verificação da dimensão do dataset e descobrimentos sobre os atributos do mesmo como nome, estrutura e tipos.
 
-O levantamento destas informações adicionais (metadados) será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo argumento é a base de dados. 
+O levantamento destas informações adicionais, chamado aqui de metadados, será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo argumento é o nome do dataset. 
 
 
 
 *** =instructions
-a função *dim()* cujo argumento é a base de dados
+a função *dim()* espera receber como parâmetro o nome do dataset
 
 *** =hint
 data("iris")
@@ -35,7 +35,7 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar a dimensão do dataset iris
-# atribua o resusltado da dimensão na varipável d
+# atribua o resusltado da dimensão a variável d
 ```
 
 *** =solution
@@ -47,8 +47,8 @@ d <- dim(iris)
 ```{r}
 test_error()
 test_object("d",
-            undefined_msg = "Tem certeza de que a variável  `d` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu a variável `d` o resultado da função `dim()` !")
+            undefined_msg = "Verifique se a variável  `d` foi definida! ",
+            incorrect_msg = "Verifique se foi atribuída  a variável `d` o resultado da função `dim()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
@@ -76,7 +76,7 @@ Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg1 = "Tente novamente! Caso precise, use a função  *print()* e o nome da variável como argumento para obter estas informações."
 msg2 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 msg3 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
 msg4 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/dim."
@@ -86,7 +86,7 @@ test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 --- type:NormalExercise lang:r xp:100 skills:1 key:850307365a
 ## Conhecendo os atributos do dataset **iris**
 
-Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos
+Este exercício consiste em carregar um dataset e fazer algumas explorações iniciais sobre os mesmos.
 
 
 *** =instructions
@@ -106,7 +106,7 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar o nome dos atributos dataset iris
-# atribua o resusltado dos nomes na varipável n
+# atribua o resultado com os nomes dos atributos na variável n
 
 # para visualziar o valor da variável, use a função print()
 ```
@@ -120,8 +120,8 @@ n <- names(iris)
 ```{r}
 test_error()
 test_object("n",
-            undefined_msg = "Tem certeza de que a variável  `n` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu a variável `n` o resultado da função `names()` !")
+            undefined_msg = "Verifique se a variável  `n` foi definida! ",
+            incorrect_msg = "Verifique se foi atribuido a variável `n` o resultado da função `names()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
@@ -150,8 +150,8 @@ Para visualizar o resultado de uma variável, use a função *print()*
 *** =sct
 ```{r}
 msg1 = "Consulte a documentação e tente novamente: https://www.rdocumentation.org/packages/base/versions/3.0.3/topics/names."
-msg2 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
-msg3 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
+msg3 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
 msg4 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
@@ -179,7 +179,7 @@ data("iris")
 *** =sample_code
 ```{r}
 # verificar o nome dos atributos dataset iris
-# atribua o resusltado dos nomes na variável s
+# atribua o resultado da dimensão a variável s
 
 
 ```
@@ -193,8 +193,8 @@ s <- str(iris)
 ```{r}
 test_error()
 test_object("s",
-            undefined_msg = "Tem certeza de que a variável  `s` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu a variável `s` o resultado da função `str()` !")
+            undefined_msg = "Verifique se a variável  `s` foi definida! ",
+            incorrect_msg = "Verifique se atribuiu a variável `s` o resultado da função `str()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
@@ -203,7 +203,7 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:43ef61a87b
 ## Em relação aos atributos do dataset iris:
 
-Qual oos tipos dos atributos?
+Quais os tipos dos atributos?
 
 *** =instructions
 - 3 numéricos (num) e 1 categórico (factor)
@@ -221,8 +221,8 @@ Para visualizar o resultado de uma variável, use a função *print()*
 
 *** =sct
 ```{r}
-msg1 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
-msg2 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
+msg1 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
+msg2 = "Tente novamente! Caso precise, use a função  *print()* com argumento o nome da variável que recebe o resultado da dimensão para obter estas informações."
 msg3 = "Well done. Vamos continuar fazendo a análise exploratória dos dados"
 msg4 = "Tente novamente! Caso precise, use a função  *print()* na variável que recebe o resultado da dimensão para obter estas informações."
 test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
@@ -269,8 +269,8 @@ sm <- summary(iris)
 ```{r}
 test_error()
 test_object("sm",
-            undefined_msg = "Tem certeza de que a variável  `sm` foi definida! ",
-            incorrect_msg = "Tem certeza que atribuiu a variável `sm` o resultado da função `summary()` !")
+            undefined_msg = "Verifique se a variável  `sm` foi definida! ",
+            incorrect_msg = "Verifique se atribuiu a variável `sm` o resultado da função `summary()` !")
 success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dados")
 
 ```
