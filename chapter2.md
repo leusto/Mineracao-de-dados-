@@ -12,8 +12,8 @@ Neste desafio pede-se que selecione do dataset <b>iris</b> o atributo <b>Sepal.L
 *** =instructions
 <ul>
 Lembrando que:
- <li>Para saber o nome dos atributos do dataset usa-se a função *names()*</li>
- <li>A seleção de um atributo pode ser feita da seguinte maneira: *dataset$nome_atributo*</li>
+ <li>Para saber o nome dos atributos do dataset usa-se a função <span style="font-style:italic;background:#e6f5ff">names()</span></li>
+ <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset$nome_atributo</span></li>
 </ul>
 
 *** =hint
