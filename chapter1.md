@@ -157,7 +157,7 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:5cb0c44603
-## Conhecendo os atributos do dataset iris
+## Explorando os atributos do dataset iris
 
 Em continuidade aos exercícios de explorações iniciais, o desafio aqui é descobrir sobre a estrutura do dataset.
 
