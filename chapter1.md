@@ -1,5 +1,5 @@
 ---
-title       : Criação de metadados sobre um dataset
+title       : Criação de metadados sobre um conjunto de dados
 description : Este capitulo consiste em analisar um dataset para fazer descobertas sobre o dataset com a finalidade de conhecer o mesmo. O resultado destas análise é uma série de informações que podem ser usadas a porteiori para dicidir sobre os tipos de pré-processamentos necessários e também os tipos de algoritmos de aprendizagem de máquina são mais adequados para uso. A este resultado chamaremos de <b>metadados</b>.
 
 

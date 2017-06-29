@@ -1,5 +1,5 @@
 ---
-title       : Manipulando o dataset
+title       : Manipulando o conjunto de dados
 description : Este capitulo consiste em realizar algumas maninpualções do dataset como selecionar uma variável, calcular a média, calcular o desvio de uma variável e desenvolver desafios gráficos como a geração do boxplot, gráfico de dispersao e de histograma.
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:66f49495b2
