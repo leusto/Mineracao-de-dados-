@@ -153,7 +153,8 @@ data("iris")
 
 *** =solution
 ```{r}
-sl_acima_media<-iris$Sepal.Length[indices]
+
+sl_acima_media<-iris$Sepal.Length[which(iris$Sepal.Length > mean(iris$Sepal.Length))]
 ```
 
 *** =sct
