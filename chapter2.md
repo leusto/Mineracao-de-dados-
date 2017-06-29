@@ -303,7 +303,7 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:f97586016a
-## Juntando os atributos <i>Sepal.Length</i> e <i>Species</i>
+## Juntando os atributos Sepal.Length e Species
 
 O objetivo deste desafio é combinar os exercícios anteriores em uma única atividade que é o calculo da média dos exemplares do atributo descritivo <b>Sepal.Length</b> que pertencem a classe <b>setosa</b>. 
 
