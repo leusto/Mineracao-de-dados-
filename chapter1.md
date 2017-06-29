@@ -229,7 +229,7 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:a773fcb8e3
-## Conhecendo os atributos do dataset iris
+## Conhecendo e explorando os atributos do dataset iris
 
 Este exercício consiste em explorar o dataset com a finalidade de se ter um resumo estatístico sobre o mesmo.
 
