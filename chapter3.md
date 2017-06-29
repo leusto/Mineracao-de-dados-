@@ -347,5 +347,5 @@ test_error()
 test_object("outlier_ex",
             undefined_msg = "Tenha certeza que foi feita a declaração da variável  `outlier_ex`!",
             incorrect_msg = "O resultado da variável `outlier_ex` está icorreto. Verifique os passos do algoritmo explicados em `instructions`. ")
-success_msg("Good job! Perceba que o valor identificado é o mesmo que aparecia distânte da distribuição da variável virginica.")
+success_msg("Good job! Perceba que o valor identificado é o mesmo que aparece distante da distribuição da variável virginica.")
 ```
