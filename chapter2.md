@@ -1,19 +1,19 @@
 ---
 title       : Manipulando o dataset
-description : Este capitulo consiste em realizar algumas maninpualções do dataset como selecionar uma variavel, calcular a media, calcular o desvio de uma variavel e desenvolver desafios gráficos como a geração do boxplot, grafico de dispersao e de histograma.
+description : Este capitulo consiste em realizar algumas maninpualções do dataset como selecionar uma variável, calcular a média, calcular o desvio de uma variável e desenvolver desafios gráficos como a geração do boxplot, gráfico de dispersao e de histograma.
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:66f49495b2
 ## Selecionando um único atributo do dataset
 
-A seleção de um único atributo do dataset pode ser feito agrupando o nome do dataset ao nome do atributo de interesse. O operador de agrupamento no R  é o <b>$</b>.
+A seleção de um único atributo do dataset pode ser feito agrupando ao nome do dataset o nome do atributo de interesse. O operador de agrupamento no R  é o <b>$</b>.
 
 Neste desafio pede-se que selecione do dataset <b>iris</b> o atributo <b>Sepal.Length</b>. E que o resultado desta selação seja armazenado na variável <b>sl</b>
 
 *** =instructions
 <ul>
 Lembrando que:
- <li>Para saber o nome dos atributos do dataset usa-se a função <span style="font-style:italic;background:#e6f5ff">names()</span></li>
- <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset<b>$</b>atributo</span></li>
+ <li>Para saber o nome dos atributos do dataset usa-se a função *names()*</li>
+ <li>A seleção de um atributo pode ser feita da seguinte maneira: *dataset$nome_atributo*</li>
 </ul>
 
 *** =hint
@@ -39,8 +39,8 @@ sl<-iris$Sepal.Length
 ```{r}
 test_error()
 test_object("sl",
-            undefined_msg = "Tem certeza que definiu a variável `sl`!",
-            incorrect_msg = "Você atribuiu iris$Sepal.Length a variável `sl`?")
+            undefined_msg = "Verifique se declarou a variável `sl`!",
+            incorrect_msg = "Verifique se atribuiu iris$Sepal.Length a variável `sl`")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
@@ -59,8 +59,8 @@ Calcule o valor médio da variável <b>Sepal.Length</b>. E salve o resultado na 
 *** =instructions
 Lembrando que:
 <ul>
- <li>A seleção de um atributo pode ser feita da seguinte maneira: <span style="font-style:italic;background:#e6f5ff">dataset$atributo</span></li>
- <li>O cálculo da média pode ser feito com o uso da função <span style="font-style:italic;background:#e6f5ff">mean()</span>. Ela recebe como argumento a sequência de valores que se deseja calcular a média, por exemplo: <span style="font-style:italic;background:#e6f5ff">mean(dataset$atributo)</span></li>
+ <li>Para saber o nome dos atributos do dataset usa-se a função *names()*;</li>
+ <li>O cálculo da média pode ser feito com o uso da função *mean()*. A função recebe como parâmetro a sequência de valores que se deseja calcular a média, por exemplo: *mean(dataset$atributo).</li>
 </ul>
 
 *** =hint
@@ -86,8 +86,8 @@ m_sl<-mean(iris$Sepal.Length)
 ```{r}
 test_error()
 test_object("m_sl",
-            undefined_msg = "Tem certeza que definiu a variável `m_sl`!",
-            incorrect_msg = "Você atribuiu o resultado da mean(iris$Sepal.Length) a variável `m_sl`?")
+            undefined_msg = "Verifique se definiu a variável `m_sl`!",
+            incorrect_msg = "Verifique se atribuiu o resultado da mean(iris$Sepal.Length) a variável `m_sl`?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
@@ -98,9 +98,9 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e5752f2629
-## Selecionando os valores do dataset acima da média
+## Selecionando valores do dataset acima da média
 
-Deseja-se saber quais os valores de <b>Sepal.Length</b> estão acima da média. 
+Deseja-se saber neste desafio quais os valores de <b>Sepal.Length</b> estão acima da média. 
 
 *** =instructions
 O algoritmo para ter a informação dos maiores valores pode ser descrito como: 
