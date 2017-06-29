@@ -316,7 +316,7 @@ O algoritmo para selecionar os exemplares da classe <b>setosa</b> deve ser usado
  <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>setosa</b> com a função <span style="font-style:italic;background:#e6f5ff">which()</span>.</li>
 </ul>
 
-Com os índices salvos em uma varíavel (que na realidade será um vetor), este deve ser usado para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média. 
+Com os índices salvos em uma varíavel (que na realidade será um vetor), deve-se usá-lo para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média. 
 
 
 *** =hint
@@ -373,8 +373,8 @@ sl_setosa_media <- mean(sl_setosa)
 *** =sct
 ```{r}
 test_object("sl_setosa_media",
-            undefined_msg = "Tem certeza que definiu a variável `sl_setosa_media`!",
-            incorrect_msg = "Você tem certeza que selecionou apenas õs exemplares da classe `setosa`!")
+            undefined_msg = "Verifique se definiu a variável `sl_setosa_media`!",
+            incorrect_msg = "Verifique se selecionou apenas os exemplares da classe `setosa`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
 
