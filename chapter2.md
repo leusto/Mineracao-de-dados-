@@ -59,8 +59,8 @@ Calcule o valor médio da variável <b>Sepal.Length</b>. E salve o resultado na 
 *** =instructions
 Lembrando que:
 <ul>
- <li>Para saber o nome dos atributos do dataset usa-se a função *names()*;</li>
- <li>O cálculo da média pode ser feito com o uso da função *mean()*. A função recebe como parâmetro a sequência de valores que se deseja calcular a média, por exemplo: *mean(dataset$atributo).</li>
+ <li>Para saber o nome dos atributos do dataset usa-se a função <span style="font-style:italic;background:#e6f5ff">names()</span>;</li>
+ <li>O cálculo da média pode ser feito com o uso da função <span style="font-style:italic;background:#e6f5ff">mean()</span>. A função recebe como parâmetro a sequência de valores que se deseja calcular a média, por exemplo: <span style="font-style:italic;background:#e6f5ff">mean(dataset$atributo)</span>.</li>
 </ul>
 
 *** =hint
