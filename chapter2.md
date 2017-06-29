@@ -388,7 +388,7 @@ A ideia desta atividade é repetir todo o exercício anterior, porém ao invés 
 
 *** =instructions
 
-O desvio padrão é calculado com o uso da função <span style="font-style:italic;background:#e6f5ff">sd()</span>.
+O desvio padrão é calculado com o uso da função *sd()*.
 
 *** =hint
 
@@ -409,7 +409,7 @@ O desvio padrão é calculado com o uso da função <span style="font-style:ital
 
 
 
-# Recupere a posição (indices) dos exemplares que tem pertencem a classe setosa
+# Recupere a posição (índices) dos exemplares que tem pertencem a classe setosa
 # Salve na variável 'classes_setosa_ex'
 
 
@@ -441,7 +441,7 @@ sl_setosa_desvio <- sd(sl_setosa)
 *** =sct
 ```{r}
 test_object("sl_setosa_desvio",
-            undefined_msg = "Tem certeza que definiu a variável `sl_setosa_desvio`!",
-            incorrect_msg = "Você tem certeza que selecionou apenas õs exemplares da classe `setosa`!")
-success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
+            undefined_msg = "Verifique se definiu a variável `sl_setosa_desvio`!",
+            incorrect_msg = "Verifique se selecionou apenas os exemplares da classe `setosa`!")
+success_msg("Good job! Siga em frente com o próximo capítulo de atividades.")
 ```
