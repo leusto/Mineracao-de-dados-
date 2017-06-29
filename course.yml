@@ -1,7 +1,7 @@
 title            : Análise Exploratória de Dados para Data Scientist 
 instructors      :
  - prof.leandro.augusto@gmail.com
-description      : Este é curso introdutório sobre Análise Exploratória de Dados que é base fundamental para quem tem interesse na formação de Data Scientist usando a Linguagem R. Como referência básica para este curso, recomenda-se o livro "Introdução à Mineração de Dados com aplicação em R", disponível em: https://www.amazon.com.br/Introdu%C3%A7%C3%A3o-Minera%C3%A7%C3%A3o-Dados-Leandro-Augusto/dp/853528446X/ref=cm_cr_arp_d_product_top?ie=UTF8.
+description      : Este é curso introdutório sobre Análise Exploratória de Dados que é base fundamental para quem tem interesse na formação de Data Scientist usando a Linguagem R. Como referência básica para este curso, recomenda-se o livro "Introdução à Mineração de Dados com aplicação em R", disponível em: <a href="https://www.amazon.com.br/Introdu%C3%A7%C3%A3o-Minera%C3%A7%C3%A3o-Dados-Leandro-Augusto/dp/853528446X/ref=cm_cr_arp_d_product_top?ie=UTF8">Amazon</a>.
 university       : Programa de Pós-Graduação em Engenharia Elétrica e Computação e Faculdade de Computação e Informática da Universidade Presbiteriana Mackenzie
 difficulty_level : 2
 time_needed      : 5 hours
