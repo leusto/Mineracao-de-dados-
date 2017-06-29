@@ -248,9 +248,9 @@ O desafio deste exercício é recuperar apenas os exemplares da classe <b>setosa
 O algoritmo para ter os exemplares da classe  <b>setosa</b> pode ser descrito como: 
 
 <ul>
- <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo</span>) e armazenar o resulatdo na variável <b>classes</b></span></li>
- <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">classes<b>==</b>"setosa"</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
- <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>setosa</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
+ <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$nome_atributo</span>) e armazenar o resulatdo na variável <b>classes</b></span></li>
+ <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se faz a comparação <span style="font-style:italic;background:#e6f5ff">classes<b>==</b>"setosa"</span>, o resultado será uma sequência de operadores lógicos, representando como TRUE os valores que satisfazem a condição (igual) e FALSE ao caso contrário.</li>
+ <li>Recuperar os índices (posição) dos exemplares que pertencem a classe <b>setosa</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisa-se ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função *which()*. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
 </ul>
 
 
@@ -268,13 +268,13 @@ data("iris")
 # Salve o resultado na variável classes
 
 
-# Compare a sequencia de valores classes iguais a setosa
+# Compare a sequência de valores classes iguais a setosa
 # Salve o resultado na variável classes_setosa
 
 
 
 
-# Recupere a posição (indices) dos exemplares que tem pertencem a classe setosa
+# Recupere a posição (índices) dos exemplares que tem pertencem a classe setosa
 # Salve na variável 'classes_setosa_ex'
 
 
@@ -295,8 +295,8 @@ classes_setosa_ex <- which(classes_setosa)
 ```{r}
 test_error()
 test_object("classes_setosa_ex",
-            undefined_msg = "Tem certeza que definiu a variável `classes_setosa_ex`!",
-            incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
+            undefined_msg = "Verifique se definiu corretamente a variável `classes_setosa_ex`!",
+            incorrect_msg = "Verifique se selecionou apenas o atributo Species para `classes`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 ```
 
