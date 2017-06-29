@@ -6,19 +6,19 @@ description : Este capitulo foca a gamification
 --- type:NormalExercise lang:r xp:100 skills:1 key:83990c831d
 ## Comparando médias
 
-Nos dois últimos exercícios do capítulo anterior vocês foram desafiados a calcular a média e o desvio padrão de uma classe específicao do dataset. Agora, neste exercício, mantendo o atributo descritivo <b>Sepal.Length</b> pede-se que calcule a média e o desvio para todas as classes do dataset, ou seja, <b>setosa</b>,<b>versicolor</b> e <b>virginica</b>.
+Nos dois últimos exercícios do capítulo anterior vocês foram desafiados a calcular a média e o desvio padrão de uma classe específica do dataset. Agora, neste exercício, mantendo ainda para análise o atributo descritivo <b>Sepal.Length</b> pede-se que calcule a média e o desvio para todas as classes do dataset, ou seja, <b>setosa</b>,<b>versicolor</b> e <b>virginica</b>.
 
 
 *** =instructions
-Caso não tenha definido a sua própria lógica para selecionar os exemplares de cada classe, segue uma vez mais a opção algortimica: 
+Caso não tenha definido a sua própria lógica para selecionar os exemplares de cada classe, segue novamente uma possível opção algoritimica: 
 
 <ul>
- <li>Selecionar o atributo que se deseja manipular <b>Species</b></li>
+ <li>Selecionar o atributo que se deseja manipular (<b>Species</b>)</li>
  <li>Comparar a sequência de valores com a classe desejada. 
  <li>Recuperar os indices (posição) dos exemplares que pertencem a classe desejada com a função <span style="font-style:italic;background:#e6f5ff">which()</span>.</li>
 </ul>
 
-Com os índices salvos em uma varíavel (que na realidade será um vetor), este deve ser usado para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média ou o desvio padrão. 
+Com os índices salvos em uma varíavel (que na realidade será um vetor), deve-se usá-lo para selecionar os exemplares do atributo descritivo <b>Sepal.Length</b>. Ou seja, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span>. A partir destes valores calcula-se a média ou o desvio padrão. 
 
 
 
@@ -59,7 +59,7 @@ data("iris")
 
 
 
-# A impressão dos resulatdos deve ser feia conforme códigos comentados abaixo. Após os cácluos de média e desvio, descomente-os para verificar o resultado.
+# A impressão dos resulatdos deve ser feia conforme códigos comentados abaixo. Após os cálculos de média e desvio, descomente-os para verificar o resultado.
 
 ### DESCOMENTAR CODIGOS APOS CALCULOS DE MEDIA E DESVIO
 #resul <- data.frame(Classes=c("setosa", "versicolor", "virginica"),
@@ -107,10 +107,21 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 Em relação aos resultados abaixo obtidos do desafio anterior:
 
-     Classes Média    Desvio
-1     setosa 5.006 0.3524897
-2 versicolor 5.936 0.5161711
-3  virginica 6.588 0.6358796
+<table>
+<tr>
+   <td></td><td>Classes</td><td>Média</td><td>Desvio</td>
+</tr>
+<tr>
+  <td>1</td><td>setosa</td><td>5.006</td> <td>0.3524897</td>
+</tr>
+<tr>
+  <td>2</td><td>versicolor</td><td>5.936</td><td>0.5161711</td>
+</tr>
+<tr>
+  <td>3</td><td>virginica</td><td>6.588</td><td>0.6358796</td>
+</tr>
+</table>
+
 
 
 qual das sentenças abaixo, com interpretações dos resulatdos de média e desvio, <b>não é verdadeira</b>:
@@ -144,16 +155,16 @@ test_mc(correct = 4, feedback_msgs = c(msg1,msg2,msg3,msg4))
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:faf1ec640e
 ## Entendendo os resultados de média e desvio com uso de explorações gráficas
 
-Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na análise de um método gráfico chamado histograma. O gráfico mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. A construção será feita com o uso de um pacote chamado ggplo: https://www.rdocumentation.org/packages/ggplot2/versions/2.2.1.
+Ainda analisando o atributo descritivo <b>Sepal.Length</b> e o atributo classificatório <b>Species</b> no sentido de comparar a distribuição dos valores, este exercício consiste na análise de um método gráfico chamado histograma. O gráfico mostra no eixo x os valores do atributo Sepal.Length e a quantidade de vezes que aparece no dataset. A construção será feita com o uso de um pacote chamado ggplot cuja documentação está disponível em: https://www.rdocumentation.org/packages/ggplot2/versions/2.2.1.
 
-A direita estão dois gráficos gerados, o que ficará incialmente visivel trata-se do histograma para cada classe. Adicionalemnte, clocando no botão Previous Plot, será possível visualizar os histogramas combinados. 
+A direita estão dois gráficos gerados, o que ficará incialmente visível trata-se do histograma para cada classe. Adicionalemnte, clicando no botão Previous Plot, será possível visualizar os histogramas combinados. 
 
 A partir da análise dos dois gráficos, marque a sentença que <b>não é verdadeira</b>:
 
 *** =instructions
 - para o atributo analisado, não há sobreposição entre as classes setosa e virginica
 - as classes versicolor e virginica têm alto nível de sobreposição
-- a classe virgina tem valores mais coesos em relação as outras classes, ou seja, a distribuição é mais concentrada. 
+- a classe virginica tem valores mais coesos em relação as outras classes, ou seja, a distribuição é mais concentrada. 
 - as três classes apresentam algum grau de interseção nos valores de Sepal.Lenght
 
 
@@ -194,13 +205,13 @@ test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3,msg4))
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:432f45bba7
-## Analisando valores fora do padrão (oulier)
+## Analisando valores fora do padrão (outlier)
 
-Um valor fora do padrão, também chamado de outlier, consiste em uma medida que extrapola os limites estabelecitos pelos quartis dos valores dos dados. A identificação desse valor pode ser feita com o uso do boxplot, gráfico que aparece ao lado. 
+Um valor fora do padrão, também chamado de outlier, consiste em uma medida que extrapola os limites estabelecitos pelos quartis dos valores dos dados. A identificação desse valor pode ser feita com o uso do boxplot, gráfico que aparece na janela ao lado. 
 
 Para um entendimento detalhado do significado deste gráfico, recomenda-se a leitura do capítulo 2 da seguinte literatura:<a href="https://www.amazon.com.br/Introdu%C3%A7%C3%A3o-Minera%C3%A7%C3%A3o-Dados-Leandro-Augusto/dp/853528446X/ref=cm_cr_arp_d_product_top?ie=UTF8">Introdução a Mineração de Dados</a>.
 
-Para esta atividade, o que interessa é identificar nos gráficos de boxplot se para o atributo descritivo Sepal.Length, separado por atributos classificatórios, há algum ponto fora das barras paralelas que indicam os limites toleráveis de valores dentro de um padrão esperado.
+Para esta atividade, o que interessa é identificar nos gráficos de boxplot se para o atributo descritivo Sepal.Length, separado por atributos classificatórios, há algum ponto fora das barras paralelas que indicam os limites toleráveis de valores dentro de um padrão esperado (outlier).
 
 
 *** =instructions
@@ -233,8 +244,8 @@ resposta <- "virginica"
 ```{r}
 test_error()
 test_object("resposta",
-            undefined_msg = "Tenha certeza da declaração da variável  `resposta`!",
-            incorrect_msg = "O atributo classificatório definido está icorreto. Verifique qual gráfico de boxplote tem a presença de um ponto fora das linhas verticais. ")
+            undefined_msg = "Verifique se atribuiu o valor corretp à variável  `resposta`!",
+            incorrect_msg = "O atributo classificatório atribuído a variável está icorreto. Verifique qual gráfico de boxplot tem a presença de um ponto fora das linhas verticais. ")
 success_msg("Good job! SIga em frente com o próximo desafio para identificar o atributo com outlier")
 ```
 
@@ -246,21 +257,21 @@ success_msg("Good job! SIga em frente com o próximo desafio para identificar o 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b28917e5a0
 ## Identificando a posição do valor com oulier 
 
-A inspeção visual oferece um recurso interessante para verificar a existência de um oulier. No entanto, mais importante que saber da existência dessa anomalia, é importante a identificação do mesmo. Esta atividade tem como finalidade identificar a posição do exemplar com o problema de oulier. 
+A inspeção visual oferece um recurso interessante para verificar a existência de um oulier. No entanto, mais importante que saber da existência dessa anomalia, é a identificação do mesmo. Esta atividade tem como finalidade identificar a posição do exemplar com o problema de oulier. 
 
 
 *** =instructions
 
-O algoritmo que possibilita identifica o outlier é semelhante aos utilizados antes com uso do operador lógico para comparação e função $which()$ para descobrir a posição. 
+O algoritmo que possibilita identifica o outlier é semelhante aos utilizados antes com uso do operador lógico para comparação e função <span style="font-style:italic;background:#e6f5ff">which()</span> para descobrir a posição. 
 
 O algoritmo para ter os exemplares da classe <b>setosa</b> com outlier pode ser descrito como: 
 
 <ol>
- <li>Selecionar o atributo que se deseja manipular $dataset$atributo$ e armazenar o resulatdo na variável <b>classes</b></span></li>
- <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara $classes<b>==</b>"virginica"$, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
- <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>virginica</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função $which()$. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
- <li>Usar os indices para recuperar o valor dos exemplares, por exemplo, $dataset$atributo[indices]$</li>
- <li>Analisar o gráfico identificar o valor de outlier e fazer a comparação, como no segundo passo desse algortimo.</li>
+ <li>Selecionar o atributo que se deseja manipular <span style="font-style:italic;background:#e6f5ff">dataset$atributo</span> e armazenar o resulatdo na variável <b>classes</b></span></li>
+ <li>Comparar a sequência de valores com a classe desejada <b>setosa</b>. Aqui será preciso fazer uso do operador lógico <b>==</b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">classes<b>==</b>"virginica"</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (igual) e FALSE para o caso contrário.</li>
+ <li>Recuperar os indices (posição) dos exemplares que pertencem a classe <b>virginica</b>. Como a resposta da comparação é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de setosa. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
+ <li>Usar os indices para recuperar o valor dos exemplares, por exemplo, <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indices]</span></li>
+ <li>Analisar o gráfico, identificar o valor de outlier e fazer a comparação, como no segundo passo desse algortimo.</li>
  <li>Identificar os valores, seguindo procedimento semelhante ao descrito nos passos 3 e 4</li>
 </ol>
 
