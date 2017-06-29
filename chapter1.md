@@ -1,6 +1,6 @@
 ---
 title       : Criação de metadados sobre um conjunto de dados
-description : Este capitulo consiste em analisar um dataset para fazer descobertas sobre o dataset com a finalidade de conhecer o mesmo. O resultado destas análise é uma série de informações que podem ser usadas a porteiori para dicidir sobre os tipos de pré-processamentos necessários e também os tipos de algoritmos de aprendizagem de máquina são mais adequados para uso. A este resultado chamaremos de <b>metadados</b>.
+description : Este capítulo consiste em analisar um dataset para fazer descobertas sobre o mesmo. O resultado das análises é uma série de informações que podem ser usadas a porteiori para dicidir sobre os tipos de pré-processamentos necessários e também os tipos de algoritmos de aprendizagem de máquina são mais adequados para uso. A este resultado chamaremos de <b>metadados</b>.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
@@ -10,18 +10,18 @@ O exercício consiste em carregar um dataset e fazer algumas explorações inici
 
 O dataset utilizado neste exercício chama-se Iris, o qual consiste de um tipo de planta descrita por quatro atributos descritivos (largura de sépala, largura de pétala, comprimeto de sépala e comprimeto de pétala) e um atributo classificiatório que pode ser definido em 3 categorias de espécies.
 
-Este é um dataset disponível no repositório do Datacamp e, portanto não é necessário a carga de dados. O carregamento é feito com o uso de uma função chamada *data()*, tendo como argumento o nome do dataset, nesse caso, iris.
+Este é um dataset disponível no repositório do Datacamp e, portanto não é necessário a carga de dados. O carregamento é feito com o uso de uma função chamada <span style="font-style:italic;background:#e6f5ff">data()</span>, tendo como argumento o nome do dataset, nesse caso, iris.
 
-Após o carregamento dos dados, a visualização dos mesmos e futuras manipulações podem ser obtidas com o uso do nome *iris*.
+Após o carregamento dos dados, a visualização dos mesmos e futuras manipulações podem ser obtidas com o uso do nome <span style="font-style:italic;background:#e6f5ff">iris</span>.
 
 Com o dataset carregado procura-se então enriquecer as informações do mesmo como a descoberta da dimensão (número de linhas - exemplares e colunas - atributos), o nome dos atributos, a estrutura e tipos dos atributos.
 
-O levantamento destas informações adicionais, chamado aqui de metadados, será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função *dim()* cujo parãmetro é o nome do dataset. 
+O levantamento destas informações adicionais, chamado aqui de metadados, será feito com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris, deve-se usar a função <span style="font-style:italic;background:#e6f5ff">dim()</span> cujo parâmetro é o nome do dataset. 
 
 
 
 *** =instructions
-a função *dim()* espera receber como parâmetro o nome do dataset
+a função <span style="font-style:italic;background:#e6f5ff">dim()</span> espera receber como parâmetro o nome do dataset
 
 *** =hint
 data("iris")
@@ -67,7 +67,7 @@ Qual o número de exemplares e o número de atributos presentes no dataset?
 - 5 exemplares e 150 atributos
 
 *** =hint
-Para visualizar o resultado de uma variável, use a função *print()*
+Para visualizar o resultado de uma variável, use a função <span style="font-style:italic;background:#e6f5ff">print()</span>.
 
 *** =pre_exercise_code
 ```{r}
@@ -91,7 +91,7 @@ Este exercício consiste em carregar um dataset e fazer explorações para a des
 
 *** =instructions
 
-A descoberta deste metadados (e dos próximos também) será feita com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris deve-se usar a função *names()* com parâmetro o nome da variável que contém o dataset carregado, nesse caso do exercício, o próprio nome do dataset. 
+A descoberta deste metadados (e dos próximos também) será feita com uso de funções específicas disponívei nativamente no R. Por exemplo, para a descoberta da dimensão do dataset iris deve-se usar a função <span style="font-style:italic;background:#e6f5ff">names()</span> com parâmetro o nome da variável que contém o dataset carregado, nesse caso do exercício, o próprio nome do dataset. 
 
 
 *** =hint
@@ -140,7 +140,7 @@ Qual o nome dos atributos?
 - "Sepal.Length","Sepal.Width","Petal.Length","Petal.Width" e "Species"
 
 *** =hint
-Para visualizar o resultado de uma variável use a função *print()*
+Para visualizar o resultado de uma variável use a função <span style="font-style:italic;background:#e6f5ff">print()</span>
 
 *** =pre_exercise_code
 ```{r}
@@ -164,7 +164,7 @@ Em continuidade aos exercícios de explorações iniciais, o desafio aqui é des
 
 *** =instructions
 
-A descoberta da estrutura do dataset para o levantamento das informações adicionais (metadados) será feito com uso da função *str()* cujo parâmetro é o nome do dataset (ou da variável usada para armazenar o dataset). O resultado do uso desta função é a dimensão do dataset, o nome dos atributos, o tipo dos atributos e uma amostra dos valores de cada variável.
+A descoberta da estrutura do dataset para o levantamento das informações adicionais (metadados) será feito com uso da função <span style="font-style:italic;background:#e6f5ff">str()</span> cujo parâmetro é o nome do dataset (ou da variável usada para armazenar o dataset). O resultado do uso desta função é a dimensão do dataset, o nome dos atributos, o tipo dos atributos e uma amostra dos valores de cada variável.
 
 
 *** =hint
@@ -212,7 +212,7 @@ Quais os tipos dos atributos?
 - apenas atributos numéricos
 
 *** =hint
-Para visualizar o resultado de uma variável, use a função *print()*
+Para visualizar o resultado de uma variável, use a função <span style="font-style:italic;background:#e6f5ff">print()</span>
 
 *** =pre_exercise_code
 ```{r}
@@ -236,7 +236,7 @@ Este exercício consiste em explorar o dataset com a finalidade de se ter um res
 
 *** =instructions
 
-O descobrimento de metadados deste desafio consiste em fazer um levantamento estatístico sobre o dataset iris, usando a função *summary()* com atributo o nome do dataset. 
+O descobrimento de metadados deste desafio consiste em fazer um levantamento estatístico sobre o dataset iris, usando a função <span style="font-style:italic;background:#e6f5ff">summary()</span> com atributo o nome do dataset. 
 
 
 *** =hint
@@ -289,7 +289,7 @@ Qual o resultado a função apresenta?
 - a função não tem retorno de valor
 
 *** =hint
-Para visualizar o resultado de uma variável, use a função *print()*
+Para visualizar o resultado de uma variável, use a função <span style="font-style:italic;background:#e6f5ff">print()</span>
 
 *** =pre_exercise_code
 ```{r}
