@@ -106,11 +106,11 @@ Deseja-se saber neste desafio quais os valores de <b>Sepal.Length</b> estão aci
 O algoritmo para ter a informação dos maiores valores pode ser descrito como: 
 
 <ul>
- <li>Selecionar o atributo que se deseja manipular (<span style="font-style:italic;background:#e6f5ff">dataset$atributo) e armazenar o resulatdo na variável <b>sl</b></span></li>
- <li>Calcular a média do atributo <span style="font-style:italic;background:#e6f5ff">mean()</span>  e armazenar o resulatdo na variável <b>m_sl</b></li>
- <li>Comparar a sequência de valores com o valor médio. Aqui será preciso fazer uso do operador lógico <b>></b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">sl <b>></b> m_sl</span>, o resultado será uma sequencia de operadores lógicos, representando como TRUE, os valores que satisfazem a condição (maior que a média) e FALSE para o caso contrário.</li>
- <li>Recuperar os indices (posição) de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que aparece a condição TRUE. </li>
- <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. O resulatdo da função <span style="font-style:italic;background:#e6f5ff">which()</span> é usado como índice para a recuperação dos valores de Sepal.Length. O indíce será usado como valor do colchetes <span style="font-style:italic;background:#e6f5ff">[ ]</span> agregado ao dataset e atributo, como no exemplo: <span style="font-style:italic;background:#e6f5ff">dataset$atributo[indice]</span> </li>
+ <li>Selecionar o atributo que se deseja manipular (*dataset$nome_atributo*) e armazenar o resulatdo na variável <b>sl</b></li>
+ <li>Calcular a média do atributo com uso da função *mean()*  e armazenar o resulatdo na variável <b>m_sl</b></li>
+ <li>Comparar a sequência de valores com o valor médio. Aqui será preciso fazer uso do operador lógico <b>></b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">sl <b>></b> m_sl</span>, o resultado será uma sequencia de operadores lógicos, atribuindo como TRUE os valores que satisfazem a condição (maior que a média) e FALSE ao caso contrário.</li>
+ <li>Recuperar os índices (posição na sequência de valores) de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length. Para isso faz-se uso da função *which()*. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que a condição TRUE acontece. </li>
+ <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. O resulatdo da função *which()* é usado como índice para a recuperação dos valores de Sepal.Length. O indíce será usado como valor do colchetes <span style="font-style:italic;background:#e6f5ff">[ ]</span> agregado ao dataset e atributo, como no exemplo: <span style="font-style:italic;background:#e6f5ff">dataset$atributo[índice]</span> </li>
 </ul>
 
 *** =hint
@@ -123,7 +123,7 @@ data("iris")
 
 *** =sample_code
 ```{r}
-# Selecione do dataset iris o atributo Sepal.Length 
+# Selecione o atributo Sepal.Length do dataset iris 
 # Salve o resultado na variável sl
 
 
@@ -132,7 +132,7 @@ data("iris")
 
 
 
-# Compare a sequencia com o valor médio para ter os maiores valores
+# Compare a sequência com o valor médio para ter os maiores valores
 # Salve o resultado na variável 'maiores'
 
 
@@ -160,19 +160,19 @@ sl_acima_media<-iris$Sepal.Length[indices]
 ```{r}
 test_error()
 test_object("sl_acima_media",
-            undefined_msg = "Tem certeza que definiu a variável `sl_acima_media`!",
-            incorrect_msg = "Você seguiu todos os passos do algoritmo apresentados em `instructions`?")
+            undefined_msg = "Verifique se definiu a variável `sl_acima_media`!",
+            incorrect_msg = "Verifique se todos os passos do algoritmo apresentados em `instructions` foram seguidos?")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:427f7df944
 ## Manipulando a variável categorica do dataset
 
-A coluna <b>Species</b> refere-se ao atributo categorico do dataset. É por meio dela que se classifica (ou rotula) as plantas Iris. Deseja-se saber quais os tipos de plantas Iris existem no datase.
+A coluna <b>Species</b> refere-se ao atributo categorico do dataset. É por meio dela que se classifica (ou rotula) os exemplares da planta Iris. Deseja-se saber quais os tipos de plantas Iris existem no dataset.
 
 
 *** =instructions
-Aqui deseja-se basicamente que seja selecionado o atributo <b>Species</b>, nos mesmos moldes do que feito antes com o atributos Sepal.Length.
+Aqui deseja-se basicamente que seja selecionado o atributo <b>Species</b>, nos mesmos moldes do que feito antes com o atributos Sepal.Length e imprima o resultado para se conhecer os tipos disponpiveis no dataset.
 
 *** =hint
 data("iris")
@@ -199,8 +199,8 @@ classes<-iris["Species"]
 ```{r}
 test_error()
 test_object("classes",
-            undefined_msg = "Tenha certeza que definiu a variável `classes`!",
-            incorrect_msg = "Você tem certeza que selecionou apenas o atributo Species para `classes`!")
+            undefined_msg = "Verifique se definiu a variável `classes`!",
+            incorrect_msg = "Verifique se selecionou apenas o atributo Species para `classes`!")
 success_msg("Good job! Siga em frente com os desafios de manipulação de dados.")
 
 ```
@@ -209,7 +209,7 @@ success_msg("Good job! Siga em frente com os desafios de manipulação de dados.
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:e74c30a746
-## Em relação as espécies de planta Iris: 
+## Em relação às espécies da planta Iris: 
 
 Qual o total de classes presentes no dataset?
 
@@ -236,11 +236,6 @@ msg4 = "Tente novamente! Pense sobre o número de classes e não o total de exem
 
 test_mc(correct = 2, feedback_msgs = c(msg1,msg2,msg3,msg4))
 ```
-
-
-
-
-
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:ddb49a486b
