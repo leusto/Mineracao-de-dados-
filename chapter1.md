@@ -280,7 +280,7 @@ success_msg("Good job! Vamos continuar fazendo a análise exploratória dos dado
 --- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:536782eac4
 ## Em relação aos resultados da função summary:
 
-Qual o resulatdo a função apresenta?
+Qual o resultado a função apresenta?
 
 *** =instructions
 - apresentação resumida dos exemplares do dataset
