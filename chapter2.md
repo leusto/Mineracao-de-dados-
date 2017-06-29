@@ -109,8 +109,8 @@ O algoritmo para ter a informação dos maiores valores pode ser descrito como:
  <li>Selecionar o atributo que se deseja manipular (*dataset$nome_atributo*) e armazenar o resulatdo na variável <b>sl</b></li>
  <li>Calcular a média do atributo com uso da função *mean()*  e armazenar o resulatdo na variável <b>m_sl</b></li>
  <li>Comparar a sequência de valores com o valor médio. Aqui será preciso fazer uso do operador lógico <b>></b>. Quando se compara <span style="font-style:italic;background:#e6f5ff">sl <b>></b> m_sl</span>, o resultado será uma sequencia de operadores lógicos, atribuindo como TRUE os valores que satisfazem a condição (maior que a média) e FALSE ao caso contrário.</li>
- <li>Recuperar os índices (posição na sequência de valores) de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length. Para isso faz-se uso da função *which()*. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que a condição TRUE acontece. </li>
- <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. O resulatdo da função *which()* é usado como índice para a recuperação dos valores de Sepal.Length. O indíce será usado como valor do colchetes <span style="font-style:italic;background:#e6f5ff">[ ]</span> agregado ao dataset e atributo, como no exemplo: <span style="font-style:italic;background:#e6f5ff">dataset$atributo[índice]</span> </li>
+ <li>Recuperar os índices (posição na sequência de valores) de <b>Sepal.Length</b> que estão acima da média. Como a resposta da comapração é uma sequência (vetor) lógico, precisamos ter a posição dos elementos que satisfazem a condição (TRUE) para então acessar os valores de Sepal.Length. Para isso faz-se uso da função <span style="font-style:italic;background:#e6f5ff">which()</span>. Essa função recebe como parâmetro os valores lógicos e retorna a posição em que a condição TRUE acontece. </li>
+ <li>Recuperar os valores de <b>Sepal.Length</b> que estão acima da média. O resulatdo da função <span style="font-style:italic;background:#e6f5ff">which()</span> é usado como índice para a recuperação dos valores de Sepal.Length. O indíce será usado como valor do colchetes <span style="font-style:italic;background:#e6f5ff">[ ]</span> agregado ao dataset e atributo, como no exemplo: <span style="font-style:italic;background:#e6f5ff">dataset$atributo[índice]</span> </li>
 </ul>
 
 *** =hint
@@ -388,7 +388,7 @@ A ideia desta atividade é repetir todo o exercício anterior, porém ao invés 
 
 *** =instructions
 
-O desvio padrão é calculado com o uso da função *sd()*.
+O desvio padrão é calculado com o uso da função <span style="font-style:italic;background:#e6f5ff">sd()</span>.
 
 *** =hint
 
